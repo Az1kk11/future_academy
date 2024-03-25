@@ -1,0 +1,5 @@
+export * from './About/index'
+export * from './Activity/index'
+export * from './Career/index'
+export * from './Courses/index'
+export * from './Registration/index'

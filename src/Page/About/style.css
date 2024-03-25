@@ -1,0 +1,685 @@
+
+.about {
+    width: 1920px;
+    height: 4090px;
+    position: relative;
+    background-color: var(--backgroundColor);
+}
+
+.about__message {
+    position: absolute;
+    top: 100px;
+    right: 1290px;
+    bottom: 3772.16px;
+    left: 370px;
+}
+
+.about__union-icon {
+    width: 260px;
+    height: 217.84px;
+    position: relative;
+}
+
+.about__message-text {
+    width: 220px;
+    height: 150px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 47.84px;
+    left: 20px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.about__bold-message {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.about__cova {
+    position: absolute;
+    top: 265.64px;
+    right: 1422px;
+    bottom: 3636.31px;
+    left: 330px;
+}
+
+.about__features {
+    position: absolute;
+    top: 117px;
+    right: 370px;
+    left: 770px;
+    bottom: 3798px;
+    display: flex;
+    gap: 21px;
+}
+
+.about__feature-card {
+    width: 246px;
+    margin: 0;
+    padding: 0;
+    width: 246px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.about__feature-card img {
+    margin: 0;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.about__feature-desc {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+.about__feature-title {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+
+
+
+
+.about__thumbnail-icon1 {
+    position: absolute;
+    top: 480px;
+    right: 1275.35px;
+    bottom: 3473.23px;
+    left: 480px;
+}
+
+.about__thumbnail-icon2 {
+    position: absolute;
+    top: 830px;
+    right: 1330px;
+    bottom: 3130px;
+    left: 310px;
+}
+
+.about__thumbnail-icon3 {
+    position: absolute;
+    top: 490px;
+    right: 320px;
+    bottom: 3250px;
+    left: 1250px;
+}
+
+.about__thumbnail-icon4 {
+    position: absolute;
+    top: 915.24px;
+    right: 420px;
+    bottom: 2945.02px;
+    left: 1270px;
+}
+
+.about__thumbnail-picture {
+    position: absolute;
+    top: 548px;
+    right: 570px;
+    bottom: 3106px;
+    left: 570px;
+}
+
+.about__thumbnail-icon5 {
+    position: absolute;
+    top: 717px;
+    right: 904.75px;
+    bottom: 3274.75px;
+    left: 917px;
+}
+
+.about__found {
+    position: absolute;
+    top: 1200px;
+    right: 370px;
+    bottom: 2414px;
+    left: 370px;
+    display: flex;    
+}
+
+.about__founded {
+    width: 380px;
+    height: 476px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about__founded-image {
+    width: 380px;
+    height: 400px;
+    margin-bottom: 24px;
+}
+
+.about__founded-name {
+    margin-right: 140px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+.about__founded-title {
+    margin-top: 12px;
+    margin-right: 102px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4F4F4F;   
+}
+
+.about__desc {
+    width: 680px;
+    height: 371px;
+    margin: 23px 0 6px 120px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+.about__copyright {
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4F4F4F;
+}
+
+
+
+
+
+.about__wrapper {
+    position: absolute;
+    top: 1744.14px;
+    right: 370px;
+    bottom: 2053.58px;
+    left: 370px;
+    /* border: 1px solid red; */
+}
+
+.about__wrapper-title {
+    width: 1017.1px;
+    height: 65.86px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 21px;
+}
+
+.about__inner {
+    display: flex;
+    gap: 20px;
+}
+
+.about__inner-box {
+    width: 220px;
+    height: 205.42px;
+    display: flex;
+    flex-direction: column;
+    gap: 25.44px;
+}
+
+.about__inner-box img {
+    width: 60px;
+    height: 60px;
+    color: var(--blueColor);
+}
+.about__inner-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+
+
+
+
+.about__graduates-container {
+    position: absolute;
+    top: 2110px;
+    width: 1920px;
+    height: 600px;
+    background-color: #00093C;
+}
+
+.about__graduates-caption {
+    position: absolute;
+    top: 62px;
+    right: 845px;
+    bottom: 494px;
+    left: 846px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.about__graduates-points {
+    position: absolute;
+    top: 19px;
+    bottom: 31px;
+}
+
+.about__graduates-icon1 {
+    position: absolute;
+    top: 410.41px;
+    right: 1658px;
+    bottom: 63px;
+    left: 0;
+}
+
+.about__graduates-icon2 {
+    position: absolute;
+    top: 458px;
+    right: 849.61px;
+    bottom: 60.27px;
+    left: 972px;
+}
+
+.about__graduates-icon3 {
+    position: absolute;
+    top: 567px;
+    right: 1126.95px;
+    bottom: 33px;
+    left: 413.05px;
+}
+
+.about__graduates-icon4 {
+    position: absolute;
+    top: 568px;
+    right: 326.95px;
+    bottom: 35px;
+    left: 413.05px;
+}
+
+.about__graduates-icon5 {
+    position: absolute;
+    top: 361.57px;
+    right: 289px;
+    bottom: 118.43px;
+    left: 1511px;
+}
+
+.about__graduates-icon6 {
+    position: absolute;
+    top: 118.57px;
+    right: 54.92px;
+    bottom: 350px;
+    left: 1527px;
+}
+
+.about__graduates-icon7 {
+    position: absolute;
+    top: 20px;
+    right: 1498.05px;
+    bottom: 420px;
+    left: 291.8px;
+}
+
+.about__graduates-cards {
+    position: absolute;
+    top: 148.57px;
+    right: 370px;
+    bottom: 91.43px;
+    left: 370px;
+    display: flex;
+    gap: 20px;
+}
+
+.about__graduates-card {
+    width: 280px;
+    height: 360px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    position: relative;
+}
+
+.about__graduates-circle-icon {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    bottom: 200px;
+    left: 70px;
+}
+
+.about__graduates-picture {
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    bottom: 210px;
+    left: 80px;
+}
+
+.about__graduates-name {
+    position: absolute;
+    top: 185px;
+    right: 20px;
+    bottom: 155px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+}
+
+.about__graduates-desc {
+    position: absolute;
+    top: 225px;
+    right: 20px;
+    bottom: 19px;
+    left: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #4F4F4F;
+}
+
+.about__programs {
+    position: absolute;
+    top: 2784px;
+    right: 369px;
+    bottom: 1087px;
+    left: 370px;
+}
+
+.about__programs-title {
+    width: 1017.1px;
+    height: 65.86px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 20.14px;
+}
+
+.about__container {
+    display: flex;
+    gap: 19px;
+}
+
+.about__box {
+    width: 181px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.about__box img {
+    width: 181px;
+    height: 2px;
+}
+.about__box span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+.about__result {
+    position: absolute;
+    top: 3060px;
+    right: 662px;
+    bottom: 870.16px;
+    left: 370px;
+    display: flex;
+}
+
+.about__courses {
+    display: flex;
+    flex-direction: column;
+    gap: 1.48px;
+    width: 188px;
+    height: 159.84px;
+    margin-right: 122.3px;
+}
+
+.about__courses-number {
+    width: 188px;
+    height: 105px;
+    font-size: 86px;
+    font-weight: 700;
+    line-height: 104.83px;
+    letter-spacing: 0.095em;
+    text-align: left;
+}
+
+.about__courses-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+.about__teachers {
+    display: flex;
+    flex-direction: column;
+    gap: 2.84px;
+    width: 250px;
+    height: 159.84px;
+    margin-right: 9.7px;
+}
+
+.about__teachers-number {
+    width: 116px;
+    height: 105px;
+    font-size: 86px;
+    font-weight: 700;
+    line-height: 104.83px;
+    letter-spacing: 0.095em;
+    text-align: left;
+}
+
+.about__teachers-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+.about__graduates {
+    width: 318px;
+    height: 140.84px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.84px;
+}
+
+.about__graduates-number {
+    width: 318px;
+    height: 105px;
+    font-size: 86px;
+    font-weight: 700;
+    line-height: 104.83px;
+    letter-spacing: 0.095em;
+    text-align: left;
+}
+
+.about__graduates-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+
+
+
+.about__partners {
+    height: 347px;
+    position: absolute;
+    top: 3324px;
+    right: 370px;
+    bottom: 419px;
+    left: 370px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about__partners-title {
+    width: 1017.1px;
+    height: 65.86px;
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+.about__partners-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about__partners-card {
+    width: 180px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
+
+
+.about__promo {
+    position: absolute;
+    top: 3744px;
+    right: 370px;
+    bottom: 100px;
+    left: 370px;
+}
+
+.about__promo-caption {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 20.14px;
+}
+
+.about__promo-cards {
+    display: flex;
+    gap: 20px;
+}
+
+
+.about__promo-card {
+    width: 280px;
+    height: 160px;
+    position: relative;
+    text-decoration: none;
+    color: #00093C;
+    border-radius: 20px;
+}
+.promo-link1 {
+    background-color: #C7EEFF;
+}
+.promo-link2 {
+    background-color: #FFE38E;
+}
+.promo-link3 {
+    background-color: #DDDDFF;
+}
+
+.promo-link4 {
+    background-color: #B8EFCF;
+}
+
+.about__promo-icon {
+    width: 53px;
+    height: 53px;
+    position: absolute;
+    top: 22px;
+    right: 113px;
+    bottom: 85px;
+    left: 114px;
+    color: #00093C;
+}
+
+.about__promo-desc {
+    position: absolute;
+    top: 93px;
+    right: 20px;
+    bottom: 27px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #00093C;
+}

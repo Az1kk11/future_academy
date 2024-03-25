@@ -1,0 +1,549 @@
+
+.career {
+    width: 1920px;
+    color: #000000;
+    background-color: #f6f7f9;
+}
+
+.career__holder {
+    width: 1920px;
+    height: 480px;
+    position: relative;
+    background-color: #00093C;
+    color: #FFFFFF;
+}
+
+.career__holder-title {
+    position: absolute;
+    top: 123px;
+    right: 879px;
+    bottom: 306px;
+    left: 370px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.career__holder-subtitle {
+    position: absolute;
+    top: 214px;
+    right: 1000px;
+    bottom: 234px;
+    left: 370px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.career__holder-icon1 {
+    width: 130.15px;
+    height: 130px;
+    position: absolute;
+    top: 73px;
+    right: 1589.85px;
+    bottom: 277px;
+    left: 200px;
+}
+
+.career__holder-icon2 {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 90px;
+    right: 729px;
+    bottom: 310px;
+    left: 1111px;
+}
+
+.career__holder-icon3 {
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    top: 180px;
+    right: 192px;
+    bottom: 232px;
+    left: 1660px;
+}
+
+.career__holder-icon4 {
+    width: 338.08px;
+    height: 131.43px;
+    position: absolute;
+    top: 278px;
+    right: 1371.92px;
+    bottom: 70.57px;
+    left: 210px;
+}
+
+.career__holder-icon5 {
+    width: 98.39px;
+    height: 81.73px;
+    position: absolute;
+    top: 300px;
+    right: 961.61px;
+    bottom: 98.27px;
+    left: 860px;
+}
+
+.career__holder-icon6 {
+    width: 338.08px;
+    height: 131.43px;
+    position: absolute;
+    top: 380px;
+    right: 84.92px;
+    left: 1497px;
+}
+
+.career__holder-picture1 {
+    width: 165px;
+    height: 165px;
+    position: absolute;
+    top: 35px;
+    right: 494px;
+    bottom: 280px;
+    left: 1261px;
+}
+
+.career__holder-picture2 {
+    width: 200px;
+    height: 199px;
+    position: absolute;
+    top: 231px;
+    right: 620px;
+    bottom: 50px;
+    left: 1100px;
+}
+
+.career__holder-picture3 {
+    width: 215px;
+    height: 179px;
+    position: absolute;
+    top: 214px;
+    right: 320px;
+    bottom: 87px;
+    left: 1385px;
+}
+
+.career__holder-link {
+    width: 258px;
+    height: 26px;
+    position: absolute;
+    top: 380px;
+    right: 1264px;
+    bottom: 50px;
+    left: 370px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    background-color: #F7941D;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 11px 15px 13px 13px;
+}
+
+.career__wrapper {
+    width: 1920px;
+    height: 970px;
+    position: relative;
+}
+
+.career__union {
+    width: 350px;
+    height: 127.84px;
+    position: absolute;
+    top: 110px;
+    right: 1200px;
+    bottom: 732.16px;
+    left: 370px;
+}
+
+.career__message {
+    width: 310px;
+    height: 130px;
+    position: absolute;
+    top: 131px;
+    right: 1220px;
+    bottom: 709px;
+    left: 390px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.career__cova {
+    width: 168px;
+    height: 188.05px;
+    position: absolute;
+    top: 185.64px;
+    right: 1422px;
+    bottom: 596.31px;
+    left: 330px;
+}
+
+.career__preview {
+    position: absolute;
+    top: 117px;
+    right: 370px;
+    bottom: 642px;
+    left: 770px;
+    display: flex;
+    gap: 21px;
+}
+
+.career__preview-box {
+    width: 246px;
+    display: flex;
+    flex-direction: column;
+}
+
+.career__preview-icon {
+    width: 32.85px;
+    height: 32.81px;
+    margin-bottom: 17.19px;
+}
+
+.career__preview-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 14px;
+}
+
+.career__preview-text {
+    width: 246px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.career__tagline {
+    width: 1017.1px;
+    height: 411px;
+    position: absolute;
+    top: 450px;
+    right: 531.95px;
+    bottom: 109px;
+    left: 370.95px;
+}
+
+.career__tagline-title {
+    width: 1017.1px;
+    height: 65.86px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    margin-bottom: 12.14px;
+}
+
+.career__tagline-desc {
+    width: 979px;
+    height: 121px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 37px;
+}
+
+.career__tagline-result {
+    display: flex;
+    gap: 66px;
+}
+
+.career__tagline-vacancy {
+    width: 188px;
+    height: 140.84px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.84px;
+}
+
+.career__tagline-employed {
+    width: 250px;
+    height: 159.84px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.84px;
+}
+
+.career__tagline-salary {
+    width: 345px;
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.career__vacancy-number, 
+.career__employed-number,
+.career__salary-number {
+    font-size: 86px;
+    font-weight: 700;
+    line-height: 105px;
+    letter-spacing: 0.095em;
+    text-align: left;
+}
+
+.career__vacancy-text,
+.career__employed-text,
+.career__salary-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.career__employment {
+    width: 1920px;
+    height: 460px;
+    position: relative;
+    background-color: #00093C;
+}
+
+.career__employment-title {
+    position: absolute;
+    top: 36px;
+    right: 680px;
+    bottom: 380px;
+    left: 680px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.career__employment-icon1 {
+    position: absolute;
+    top: 164px;
+    right: 1290px;
+    bottom: 150px;
+    left: 583px;
+}
+
+.career__employment-icon2 {
+    position: absolute;
+    top: 164px;
+    right: 925px;
+    bottom: 150px;
+    left: 924px;
+}
+
+.career__employment-icon3 {
+    position: absolute;
+    top: 164px;
+    right: 577px;
+    bottom: 150px;
+    left: 1271px;
+}
+
+.career__employment-col {
+    position: absolute;
+    top: 126px;
+    right: 470px;
+    bottom: 140px;
+    left: 470px;
+    display: flex;
+    gap: 70px;
+}
+
+.career__employment-box {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.career__employment-icon {
+    width: 54px;
+    height: 54px;
+    margin-left: 110px;
+    margin-right: 116px;
+}
+
+.career__employment-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.career__employment-link {
+    width: 258px;
+    height: 26px;
+    position: absolute;
+    top: 350px;
+    right: 817px;
+    bottom: 60px;
+    left: 817px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-decoration: none;
+    background-color: orange;
+    color: #FFFFFF;
+    border-radius: 6px;
+    padding: 11px 15px 13px 13px;
+}
+
+.career__vacancy {
+    width: 1920px;
+    height: 1161.43px;
+    position: relative;
+}
+
+.career__vacancy-caption {
+    position: absolute;
+    top: 64px;
+    right: 531.95px;
+    bottom: 1031.57px;
+    left: 370.95px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.career__vacancy-cards {
+    position: absolute;
+    top: 150px;
+    right: 370px;
+    bottom: 571.43px;
+    left: 370px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.career__vacancy-card {
+    width: 380px;
+    height: 210px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.vacancy-card1 {
+    background-color: #C5DDFF;
+}
+
+.vacancy-card2 {
+    background-color: #B8EFCF;
+}
+
+.vacancy-card3 {
+    background-color: #FFCE94;
+}
+
+.vacancy-card4 {
+    background-color: #C7EEFF;
+}
+
+.vacancy-card5 {
+    background-color: #FFE38E;
+}
+
+.career__vacancy-title {
+    position: absolute;
+    top: 31px;
+    right: 76px;
+    bottom: 155px;
+    left: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #00093C;
+    margin-bottom: 9px;
+}
+
+.career__vacancy-desc {
+    position: absolute;
+    top: 64px;
+    right: 30px;
+    bottom: 87px;
+    left: 30px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4F4F4F;
+}
+
+.career__vacancy-salary {
+    position: absolute;
+    top: 143px;
+    right: 20px;
+    bottom: 33px;
+    left: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #00093C;
+}
+
+
+.career__vacancy-subtitle {
+    position: absolute;
+    top: 715px;
+    right: 532.9px;
+    bottom: 380.57px;
+    left: 370px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.career__company {
+    position: absolute;
+    top: 801px;
+    right: 370px;
+    bottom: 99.43px;
+    left: 370px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.career__company-card {
+    width: 180px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+

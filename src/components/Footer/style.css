@@ -1,0 +1,186 @@
+.footer {
+    width: 1920px;
+    height: 560px;
+    background-color: var(--blueColor);
+    position: relative;
+    color: var(--whiteColor);
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--whiteColor);
+}
+
+.footer__logo {
+    position: absolute;
+    top: 140px;
+    right: 1466.99px;
+    bottom: 361.36px;
+    left: 370px;
+    width: 83.01px;
+    height: 58.64px;
+}
+
+
+.footer__telnumber {
+    position: absolute;
+    top: 241.64px;
+    right: 1400px;
+    bottom: 292.36px;
+    left: 370px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+
+
+.footer__address {
+    width: 198px;
+    height: 26px;
+    position: absolute;
+    top: 279.64px;
+    right: 1353px;
+    bottom: 254.36px;
+    left: 370px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.footer__email {
+    position: absolute;
+    top: 317.64px;
+    right: 1353px;
+    bottom: 216.36px;
+    left: 370px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.footer__social {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 381.46px;
+    right: 1378px;
+    bottom: 152.54px;
+    left: 370px;
+}
+
+.footer__link-Vk {
+    width: 21px;
+    height: 26px;
+}
+
+.footer__link-instagram {
+    width: 16px;
+    height: 26px;
+}
+
+.footer__link-facebook {
+    width: 18px;
+    height: 26px;
+}
+
+.footer__link-youtube {
+    width: 21px;
+    height: 26px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.footer__link-telegram {
+    width: 16px;
+    height: 26px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.footer__copyright {
+    font-family: "Montserrat";
+    position: absolute;
+    top: 437px;
+    right: 1404px;
+    bottom: 108px;
+    left: 370px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #BDBDBD;
+}
+
+.footer__child {
+    width: 150px;
+    height: 416px;
+    position: absolute;
+    top: 70px;
+    right: 1117px;
+    bottom: 74px;
+    left: 653px;
+    text-align: left;
+}
+
+.footer__teenagers {
+    width: 267.09px;
+    height: 434px;
+    position: absolute;
+    top: 70px;
+    right: 789.91px;
+    bottom: 56px;
+    left: 863px;
+    text-align: left;
+}
+
+.footer__adults {
+    width: 186px;
+    height: 382px;
+    position: absolute;
+    top: 70px;
+    right: 543.91px;
+    bottom: 108px;
+    left: 1190.09px;
+    text-align: left;
+}
+
+.footer__information {
+    width: 115px;
+    height: 280px;
+    position: absolute;
+    top: 70px;
+    right: 368.91px;
+    bottom: 210px;
+    left: 1436.09px;
+    text-align: left;
+}
+
+.footer__heading {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.footer__list { 
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.footer__link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #BDBDBD;
+}
