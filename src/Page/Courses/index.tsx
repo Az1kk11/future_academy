@@ -1,58 +1,103 @@
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import './style.css'
 
 import children from '../../image/courses/children.png'
 import family from '../../image/courses/family.png'
-import gradientline from '../../image/courses/gradientline.png'
-import grayline from '../../image/courses/grayline.png'
 import phone from '../../image/courses/phone.png'
 import teenager from '../../image/courses/teenager.png'
 
+const detyArr = [
+    { category: 'dety', title: "Робототехника", link: '#' },
+    { category: 'dety', title: "Создание игр", link: '#' },
+    { category: 'dety', title: "Программирование", link: '#' },
+    { category: 'dety', title: "Мультимедиа", link: '#' },
+    { category: 'dety', title: "Soft skills", link: '#' },
+    { category: 'dety', title: "Шахматы", link: '#' },
+    { category: 'dety', title: "Блогинг", link: '#' },
+    { category: 'dety', title: "Создание игр", link: '#' },
+    { category: 'dety', title: "Программирование", link: '#' },
+    { category: 'dety', title: "Блогинг", link: '#' },
+    { category: 'dety', title: "Soft skills", link: '#' },
+
+    { category: 'podrostki', title: "Web - разработка", link: '#' },
+    { category: 'podrostki', title: "Прикладное программирование", link: '#' },
+    { category: 'podrostki', title: "Графическое моделирование", link: '#' },
+    { category: 'podrostki', title: "Game Development", link: '#' },
+    { category: 'podrostki', title: "Soft skills", link: '#' },
+    { category: 'podrostki', title: "Разработчик мобильных приложений", link: '#' },
+    { category: 'podrostki', title: "Блогинг", link: '#' },
+    { category: 'podrostki', title: "Создание игр", link: '#' },
+    { category: 'podrostki', title: "Программирование", link: '#' },
+    { category: 'podrostki', title: "Мультимедиа", link: '#' },
+    { category: 'podrostki', title: "Soft skills", link: '#' },
+
+    { category: 'vzrosle', title: "Разработчик игр на Unity", link: '#' },
+    { category: 'vzrosle', title: "Разработка", link: '#' },
+    { category: 'vzrosle', title: "Графический Дизайн", link: '#' },
+    { category: 'vzrosle', title: "Тестировщик ПО", link: '#' },
+    { category: 'vzrosle', title: "Интернет Маркетинг", link: '#' },
+    { category: 'vzrosle', title: "Java-разработчик", link: '#' },
+    { category: 'vzrosle', title: "Python–разработчик", link: '#' },
+    { category: 'vzrosle', title: "IOS-разработчик", link: '#' },
+    { category: 'vzrosle', title: "Программирование", link: '#' },
+]
+
+type category = {
+    category: string,
+    title: string,
+    link: string,
+}
+
 export const Courses: React.FC = () => {
+    const [list, setList] = useState<any>([])
+    const [selectedCategory, setSelectedCategory] = useState('dety');
+
+    useEffect(() => {
+        setList(detyArr);
+    }, []);
+
+    const filteredHandle = () => {
+        if(!selectedCategory){
+            return list
+        }
+        return list.filter((item: category) => item.category === selectedCategory)
+    }
+
+    let filteredList = useMemo(filteredHandle, [selectedCategory, list])
+
     return (
         <main className="courses">
             <h1 className="courses__heading">Все программы обучения</h1>
             <div className="courses__category">
-                <div className="courses__child">
-                    <img src={children} alt="" className="courses__child-icon"/>
-                        <div className="courses__child-text">
-                            <span className="courses__child-title">Дети</span>
-                            <span className="courses__child-desc">8 — 14 лет</span>
-                        </div>
+                <div className={selectedCategory === 'dety' ? 'courses__child active' : 'courses__child'} onClick={() => setSelectedCategory('dety')}>
+                    <img src={children} alt="" className="courses__child-icon" />
+                    <div className="courses__child-text">
+                        <span className="courses__child-title">Дети</span>
+                        <span className="courses__child-desc">8 — 14 лет</span>
+                    </div>
                 </div>
-                <div className="courses__teenager">
-                    <img src={teenager} alt="" className="courses__teenager-icon"/>
-                        <div className="courses__teenager-text">
-                            <span className="courses__teenager-title">Подростки</span>
-                            <span className="courses__teenager-desc">14 — 18 лет</span>
-                        </div>
+                <div className={selectedCategory === 'podrostki' ? 'courses__child active' : 'courses__child'} onClick={() => setSelectedCategory('podrostki')}>
+                    <img src={teenager} alt="" className="courses__child-icon" />
+                    <div className="courses__child-text">
+                        <span className="courses__child-title">Подростки</span>
+                        <span className="courses__child-desc">14 — 18 лет</span>
+                    </div>
                 </div>
-                <div className="courses__adults">
-                    <img src={family} alt="" className="courses__adults-icon"/>
-                        <div className="courses__adults-text">
-                            <span className="courses__adults-title">Взрослые</span>
-                            <span className="courses__adults-desc">18 — ∞ </span>
-                        </div>
+                <div className={selectedCategory === 'vzrosle' ? 'courses__child active' : 'courses__child'} onClick={() => setSelectedCategory('vzrosle')}>
+                    <img src={family} alt="" className="courses__child-icon" />
+                    <div className="courses__child-text">
+                        <span className="courses__child-title">Взрослые</span>
+                        <span className="courses__child-desc">18 — ∞ </span>
+                    </div>
                 </div>
-            </div>
-
-            <div className="courses__lines">
-                <img src={gradientline} alt="" className="courses__line-gradient" />
-                <img src={grayline} alt="" className="courses__line-gray" />
             </div>
 
             <span className="courses__title">Направление</span>
 
             <div className="courses__direction">
-                <a className="courses__link" href="#">Робототехника</a>
-                <a className="courses__link" href="#">Создание игр</a>
-                <a className="courses__link" href="#">Web-разработка</a>
-                <a className="courses__link" href="#">Мультимедиа</a>
-                <a className="courses__link" href="#">Шахматы</a>
-                <a className="courses__link" href="#">3D-моделирование и дизайн</a>
-                <a className="courses__link" href="#">Английский язык</a>
-                <a className="courses__link" href="#">Блогинг</a>
-                <a className="courses__link" href="#">Soft skills</a>
+                {filteredList.map((item:any, idx:number) => (
+                    <span className="courses__link">{item.title}</span>
+                ))}
             </div>
 
             <div className="courses__promo-cards">
