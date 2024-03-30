@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
+import CountUp from 'react-countup'
 import './style.css'
-import { convertTypeAcquisitionFromJson } from 'typescript'
 
 // images
 import Group837 from '../../image/widget/Group 837.svg'
@@ -15,28 +15,72 @@ import cova from '../../image/widget/cova.svg'
 import cross from '../../image/widget/cross.svg'
 import diagram from '../../image/widget/diagram.png'
 import familye from '../../image/widget/family.png'
-import gradientline from '../../image/widget/gradientline.svg'
-import grayline from '../../image/widget/grayline.svg'
 import monitor from '../../image/widget/monitor.png'
 import newspaper from '../../image/widget/newspaper.png'
 import play from '../../image/widget/play.svg'
 import transparent from '../../image/widget/transparent.svg'
 import young from '../../image/widget/young.png'
 
-const widgetArr = [
-    { title: "Робототехника", link: '#' },
-    { title: "Создание игр", link: '#' },
-    { title: "Web-разработка", link: '#' },
-    { title: "Мультимедиа", link: '#' },
-    { title: "Шахматы", link: '#' },
-    { title: "3D-моделирование и дизайн", link: '#' },
-    { title: "Английский язык", link: '#' },
-    { title: "Блогинг", link: '#' },
-    { title: "Soft skills", link: '#' },
+const detyArr = [
+    { category: 'dety', title: "Робототехника", link: '#' },
+    { category: 'dety', title: "Создание игр", link: '#' },
+    { category: 'dety', title: "Программирование", link: '#' },
+    { category: 'dety', title: "Мультимедиа", link: '#' },
+    { category: 'dety', title: "Soft skills", link: '#' },
+    { category: 'dety', title: "Шахматы", link: '#' },
+    { category: 'dety', title: "Блогинг", link: '#' },
+    { category: 'dety', title: "Создание игр", link: '#' },
+    { category: 'dety', title: "Программирование", link: '#' },
+    { category: 'dety', title: "Блогинг", link: '#' },
+    { category: 'dety', title: "Soft skills", link: '#' },
+
+    { category: 'podrostki', title: "Web - разработка", link: '#' },
+    { category: 'podrostki', title: "Прикладное программирование", link: '#' },
+    { category: 'podrostki', title: "Графическое моделирование", link: '#' },
+    { category: 'podrostki', title: "Game Development", link: '#' },
+    { category: 'podrostki', title: "Soft skills", link: '#' },
+    { category: 'podrostki', title: "Разработчик мобильных приложений", link: '#' },
+    { category: 'podrostki', title: "Блогинг", link: '#' },
+    { category: 'podrostki', title: "Создание игр", link: '#' },
+    { category: 'podrostki', title: "Программирование", link: '#' },
+    { category: 'podrostki', title: "Мультимедиа", link: '#' },
+    { category: 'podrostki', title: "Soft skills", link: '#' },
+
+    { category: 'vzrosle', title: "Разработчик игр на Unity", link: '#' },
+    { category: 'vzrosle', title: "Разработка", link: '#' },
+    { category: 'vzrosle', title: "Графический Дизайн", link: '#' },
+    { category: 'vzrosle', title: "Тестировщик ПО", link: '#' },
+    { category: 'vzrosle', title: "Интернет Маркетинг", link: '#' },
+    { category: 'vzrosle', title: "Java-разработчик", link: '#' },
+    { category: 'vzrosle', title: "Python–разработчик", link: '#' },
+    { category: 'vzrosle', title: "IOS-разработчик", link: '#' },
+    { category: 'vzrosle', title: "Программирование", link: '#' },
 ]
 
+type category = {
+    category: string,
+    title: string,
+    link: string,
+}
 
 export const Widget: React.FC = () => {
+    const [list, setList] = useState<any>([])
+    const [selectedCategory, setSelectedCategory] = useState('dety');
+
+    useEffect(() => {
+        setList(detyArr);
+    }, []);
+
+    const filteredHandle = () => {
+        if (!selectedCategory) {
+            return list
+        }
+        return list.filter((item: category) => item.category === selectedCategory)
+    }
+
+    let filteredList = useMemo(filteredHandle, [selectedCategory, list])
+
+
     return (
         <div className="widget">
             <div className="widget-messege">
@@ -49,48 +93,38 @@ export const Widget: React.FC = () => {
             </div>
             <img src={cova} alt="" className="widget-messege__cova-img" />
 
-            <div>
+            <>
                 <div className="widget-category">
-                    <div className="widget-category child-category">
+                    <div className={selectedCategory === 'dety' ? 'child-category active' : 'child-category'} onClick={() => setSelectedCategory('dety')}>
                         <img src={children} alt="" className="child-category__img" />
                         <div className="child-category__text">
                             <span className="child-category__text1">Дети</span>
                             <span className="child-category__text2">8 — 14 лет</span>
                         </div>
                     </div>
-                    <div className="widget-category young-category">
-                        <img src={young} alt="" className="young-category__img" />
-                        <div className="young-category__text">
-                            <span className="young-category__text1">Подростки</span>
-                            <span className="young-category__text2">14 — 18 лет</span>
+                    <div className={selectedCategory === 'podrostki' ? 'child-category active' : 'child-category'} onClick={() => setSelectedCategory('podrostki')}>
+                        <img src={young} alt="" className="child-category__img" />
+                        <div className="child-category__text">
+                            <span className="child-category__text1">Подростки</span>
+                            <span className="child-category__text2">14 — 18 лет</span>
                         </div>
                     </div>
-                    <div className="widget-category adults-category">
-                        <img src={familye} alt="" className="adults-category__img" />
-                        <div className="adults-category__text">
-                            <span className="adults-category__text1">Взрослые</span>
-                            <span className="adults-category__text2">18 — ∞ </span>
+                    <div className={selectedCategory === 'vzrosle' ? 'child-category active' : 'child-category'} onClick={() => setSelectedCategory('vzrosle')}>
+                        <img src={familye} alt="" className="child-category__img" />
+                        <div className="child-category__text">
+                            <span className="child-category__text1">Взрослые</span>
+                            <span className="child-category__text2">18 — ∞ </span>
                         </div>
-                    </div>
-                </div>
-
-                <div className="widget__lines">
-                    <div className="widget__gradient-line">
-                        <img src={gradientline} alt="" className="widget__gradient-icon" />
-                    </div>
-                    <div className="widget__gray-line">
-                        <img src={grayline} alt="" className="widget__gray-icon" />
                     </div>
                 </div>
 
                 <ul className="widget-category__course">
-                    {widgetArr.map((itm, idx) => (
-                        <li key={idx} className="widget-category__item">
-                            <a href={itm.link} className="widget-category__link">{itm.title}</a>
-                        </li>
+                    {filteredList.map((item: any, idx: number) => (
+                        <li className="widget-category__link" key={idx}>{item.title}</li>
                     ))}
                 </ul>
-            </div>
+
+            </>
 
             <div className="widget__gadgets">
                 <img src={cross} alt="" className="widget__vector1" />
@@ -105,17 +139,17 @@ export const Widget: React.FC = () => {
                 </div>
                 <p className="widget__gadgets-desc">Актуальные знания от признанных экспертов рынка <br /> для новичков и практикующих специалистов.</p>
 
-                <div className="widget-result__courses">
-                    <span className="widget-courses__number">600</span>
-                    <span className="widget-courses__text">Курсов</span>
+                <div className="widget-result1">
+                    <span className="number"><CountUp end={600}/></span>
+                    <span className="text">Курсов</span>
                 </div>
-                <div className="widget-result__teachers">
-                    <span className="widget-teachers__number">82</span>
-                    <span className="widget-teachers__text">Ведущих преподавателей</span>
+                <div className="widget-result2">
+                    <span className="number"><CountUp end={82}/></span>
+                    <span className="text">Ведущих преподавателей</span>
                 </div>
-                <div className="widget-result__graduates">
-                    <span className="widget-graduates__number">14795</span>
-                    <span className="widget-graduates__text">Выпускников</span>
+                <div className="widget-result3">
+                    <span className="number"><CountUp end={14795}/></span>
+                    <span className="text">Выпускников</span>
                 </div>
             </div>
 

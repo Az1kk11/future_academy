@@ -96,7 +96,7 @@ export const Courses: React.FC = () => {
 
             <div className="courses__direction">
                 {filteredList.map((item:any, idx:number) => (
-                    <span className="courses__link">{item.title}</span>
+                    <span className="courses__link" key={idx}>{item.title}</span>
                 ))}
             </div>
 

@@ -53,13 +53,30 @@
     left: 330px;
 }
 
-.child-category {
-    width: 127px;
-    height: 49.08px;
+.widget-category{
+    width: 900px;
+    height: 80px;
     display: flex;
-    position: absolute;
-    top: 106.26px;
-    left: 688.65px;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-left: 20px;
+    border-bottom: .5px solid rgb(206, 206, 206);
+}
+
+.child-category {
+    width: 150px;
+    height: 60px;
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.child-category:hover,
+.widget-category .active{
+    background-image: url('../../image/courses/gradientline.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .child-category__text {
@@ -84,92 +101,14 @@
     color: #4f4f4f;
 }
 
-.young-category {
-    width: 162.62px;
-    height: 49.08px;
-    display: flex;
-    gap: 17.54px;
-    position: absolute;
-    top: 106.26px;
-    left: 975.65px;
-}
-
-.young-category__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: "Montserrat";
-}
-
-.young-category__text1 {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 19.5px;
-    color: #000000;
-}
-
-.young-category__text2 {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.63px;
-    color: #4f4f4f;
-}
-
-.adults-category {
-    width: 153.08px;
-    height: 49.08px;
-    display: flex;
-    gap: 17px;
-    position: absolute;
-    top: 104.92px;
-    left: 1298.27px;
-}
-
-.adults-category__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: "Montserrat";
-}
-
-.adults-category__text1 {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 19.5px;
-    color: #000000;
-}
-
-.adults-category__text2 {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.63px;
-    color: #4f4f4f;
-}
-
-.widget__gradient-line {
-    position: absolute;
-    top: 169px;
-    right: 1090px;
-    bottom: 2021px;
-    left: 670px;
-}
-
-.widget__gray-line {
-    position: absolute;
-    top: 170.5px;
-    right: 370px;
-    bottom: 2019.5px;
-    left: 670px;
-}
-
 .widget-category__course {
     position: absolute;
     top: 208.02px;
-    right: 468px;
+    right: 368px;
     left: 670px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
 }
 
 .widget-category__link {
@@ -186,9 +125,9 @@
     background-color: #ffffff;
 }
 
-/* .widget-category__link:hover {
-    box-shadow: linear-gradient(#F7941D, #27AAE1);
-} */
+.widget-category__link:hover{
+    background-color: rgb(218, 218, 218);
+}
 
 .widget__vector1 {
     position: absolute;
@@ -236,7 +175,7 @@
     height: 436px;
     position: absolute;
     top: 548px;
-    left: 576px;
+    left: 520px;
     right: 564px;
     border-radius: 20px;
     opacity: 0.6px;
@@ -247,7 +186,7 @@
     height: 98.25px;
     position: absolute;
     top: 717px;
-    left: 917px;
+    left: 865px;
     right: 904.75px;
     border: 2px;
 }
@@ -258,65 +197,65 @@
     position: absolute;
     top: 1100px;
     top: 1057.7px;
-    left: 370.95px;
+    left: 510.95px;
     right: 769.13px;
     font-family: "Montserrat";
     font-size: 24px;
     font-weight: 700;
     line-height: 34px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
 }
 
-.widget-result__courses {
+.widget-result1 .number,
+.widget-result2 .number,
+.widget-result3 .number {
+    font-size: 86px;
+    font-weight: 700;
+    line-height: 104.83px;
+    letter-spacing: 0.095em;
+    text-align: center;
+}
+
+.widget-result1 .text,
+.widget-result2 .text,
+.widget-result3 .text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+}
+
+.widget-result1 {
     width: 188px;
     height: 140.84px;
     position: absolute;
     top: 1208.16px;
-    left: 370px;
+    left: 470px;
     right: 1362px;
     display: flex;
     flex-direction: column;
 }
 
-.widget-courses__number,
-.widget-teachers__number,
-.widget-graduates__number {
-    font-size: 86px;
-    font-weight: 700;
-    line-height: 104.83px;
-    letter-spacing: 0.095em;
-    text-align: left;
-}
-
-.widget-courses__text,
-.widget-teachers__text,
-.widget-graduates__text {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 34px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #000000;
-}
-
-.widget-result__teachers {
+.widget-result2 {
     width: 250px;
     height: 159.84px;
     position: absolute;
     top: 1208.16px;
-    left: 680.3px;
+    left: 780.3px;
     right: 989.7px;
     display: flex;
     flex-direction: column;
 }
 
-.widget-result__graduates {
+.widget-result3 {
     width: 318px;
     height: 140.84px;
     position: absolute;
     top: 1208.16px;
-    left: 940px;
+    left: 1040px;
     right: 662px;
     display: flex;
     flex-direction: column;
