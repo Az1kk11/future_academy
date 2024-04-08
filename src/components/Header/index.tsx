@@ -5,8 +5,13 @@ import logo from '../../image/header/Logo.svg'
 import burger from '../../image/header/burger.svg'
 import person from '../../image/header/person.svg'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { selectAuth } from '../../Redux/services/userAuth'
 
 export const Header: React.FC = () => {
+    const { logedIn, user } = useSelector(selectAuth)
+    console.log(user);
+    
     return (
         <div className="header">
             <Link to={'/'}>
@@ -32,10 +37,21 @@ export const Header: React.FC = () => {
                     <span className="header__link">8 800 950-33-98</span>
                 </li>
                 <li className="header__item">
-                    <Link to="/registration" className="header__link person-link">
-                        <img className="person__icon" src={person} alt="" />
-                        Регистрация
-                    </Link>
+                    {!logedIn ?
+
+                        <div className="profile-user">
+
+                        <button className="header__link person-link">
+                            <img className="person__icon" src={person} alt="" />
+                            Выйти
+                        </button>
+                        </div>
+                        :
+                        <Link to="/registration" className="header__link person-link">
+                            <img className="person__icon" src={person} alt="" />
+                            Регистрация
+                        </Link>
+                    }
                 </li>
             </ul>
         </div>

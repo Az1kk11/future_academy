@@ -53,3 +53,8 @@
     width: 17.28px;
     height: 18.32px;
 }
+
+.header__item button{
+    border: none;
+    background: transparent;
+}
