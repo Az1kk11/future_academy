@@ -6,7 +6,8 @@ const initialState = {
     isLoading: false,
     logedIn: false,
     error: null,
-    user: null
+    user: null,
+    profile: {}
 }
 
 export const authUserSlice = createSlice({
@@ -17,9 +18,12 @@ export const authUserSlice = createSlice({
             state.isLoading = true
         },
         siginUserSuccess: (state, action) => {
+            console.log(action);
+            
             state.logedIn = true
             state.isLoading = false
             state.user = action.payload
+            state.profile = action.payload            
             setItem('token', action.payload.token)
         },
         signUserFailure: (state, action) => {

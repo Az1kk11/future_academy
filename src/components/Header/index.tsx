@@ -9,9 +9,7 @@ import { useSelector } from 'react-redux'
 import { selectAuth } from '../../Redux/services/userAuth'
 
 export const Header: React.FC = () => {
-    const { logedIn, user } = useSelector(selectAuth)
-    console.log(user);
-    
+
     return (
         <div className="header">
             <Link to={'/'}>
@@ -37,21 +35,16 @@ export const Header: React.FC = () => {
                     <span className="header__link">8 800 950-33-98</span>
                 </li>
                 <li className="header__item">
-                    {!logedIn ?
-
-                        <div className="profile-user">
-
-                        <button className="header__link person-link">
-                            <img className="person__icon" src={person} alt="" />
-                            Выйти
-                        </button>
-                        </div>
-                        :
-                        <Link to="/registration" className="header__link person-link">
-                            <img className="person__icon" src={person} alt="" />
-                            Регистрация
-                        </Link>
-                    }
+                    <Link to="/registration" className="header__link person-link">
+                        <img className="person__icon" src={person} alt="" />
+                        Регистрация
+                    </Link>
+                </li>
+                <li className="header__item">
+                    <Link to="/registration" className="header__link person-link">
+                        <i className="ri-login-box-line"></i>
+                        Логин
+                    </Link>
                 </li>
             </ul>
         </div>

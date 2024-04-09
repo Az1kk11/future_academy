@@ -58,3 +58,7 @@
     border: none;
     background: transparent;
 }
+.header__item i{
+    font-size: 20px;
+}
+

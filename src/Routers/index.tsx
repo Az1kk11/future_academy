@@ -12,6 +12,7 @@ const Rauters = () => {
         <Route path='/activity' element={<Activity/>}/>
         <Route path='/career' element={<Career/>}/>
         <Route path='/registration' element={<Registration/>}/>
+        <Route path='/login' element={<Registration/>}/>
     </Routes>
   )
 }

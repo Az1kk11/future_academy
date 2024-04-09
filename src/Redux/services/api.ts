@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getItem } from "../Helpers/persistance-storage";
 
-axios.defaults.baseURL = 'https://futureskillshub.uz'
+axios.defaults.baseURL = 'https://futureskillshub.uz/api'
 
 axios.interceptors.request.use(config => {
     const token = getItem('token')
