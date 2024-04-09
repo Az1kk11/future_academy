@@ -1,5 +1,6 @@
-import { setItem } from './../Helpers/persistance-storage';
+
 import { createSlice } from "@reduxjs/toolkit"
+import { setItem } from "../helpers/persistance-storage";
 
 
 const initialState = {

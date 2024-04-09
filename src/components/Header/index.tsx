@@ -5,11 +5,12 @@ import logo from '../../image/header/Logo.svg'
 import burger from '../../image/header/burger.svg'
 import person from '../../image/header/person.svg'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import { selectAuth } from '../../Redux/services/userAuth'
 
 export const Header: React.FC = () => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 70ec8ba (backend)
     return (
         <div className="header">
             <Link to={'/'}>
@@ -39,12 +40,15 @@ export const Header: React.FC = () => {
                         <img className="person__icon" src={person} alt="" />
                         Регистрация
                     </Link>
+<<<<<<< HEAD
                 </li>
                 <li className="header__item">
                     <Link to="/registration" className="header__link person-link">
                         <i className="ri-login-box-line"></i>
                         Логин
                     </Link>
+=======
+>>>>>>> parent of 70ec8ba (backend)
                 </li>
             </ul>
         </div>

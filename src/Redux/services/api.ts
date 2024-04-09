@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getItem } from "../Helpers/persistance-storage";
+import { getItem } from "../helpers/persistance-storage";
 
 axios.defaults.baseURL = 'https://futureskillshub.uz/api'
 

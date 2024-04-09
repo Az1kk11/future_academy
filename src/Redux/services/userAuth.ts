@@ -1,4 +1,4 @@
-import { RootState } from "../Store";
+import { RootState } from "../store";
 import axios from "./api";
 
 const AuthUserServices = {

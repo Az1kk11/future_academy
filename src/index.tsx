@@ -3,28 +3,19 @@ import App from './App';
 
 import './index.css';
 import 'remixicon/fonts/remixicon.css'
-import 'react-toastify/dist/ReactToastify.css';
-
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { store } from './Redux/Store';
-import { ToastContainer } from 'react-toastify';
+import { store } from './Redux/store';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
 root.render(
-  <BrowserRouter>
-    <Provider store={store}>
-      <ToastContainer
-        theme="dark"
-        position="top-center"
-        autoClose={2000}
-        closeOnClick
-        pauseOnHover={false}
-      />
+  <Provider store={ store }>
+    <BrowserRouter>
       <App />
-    </Provider>
-  </BrowserRouter>
+    </BrowserRouter>
+  </Provider>
 );
