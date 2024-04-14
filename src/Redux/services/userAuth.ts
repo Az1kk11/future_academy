@@ -7,8 +7,13 @@ const AuthUserServices = {
         return data
     },
 
-    async userLogin(user: string) {
+    async userLogin(user: object) {
         const { data } = await axios.post('/user/login', user)
+        return data
+    },
+
+    async getme() {
+        const { data } = await axios.get('/getme')
         return data
     }
 }

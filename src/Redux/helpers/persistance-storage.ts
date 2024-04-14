@@ -1,8 +1,13 @@
-export const setItem = (key: string, data: any) => {
-    try {
-        localStorage.setItem(key, data)
-    } catch (error) {
-        console.log('Error saveing data');
+export const setItem = (key: string, data: string) => {
+    console.log(key, data);
+    if(data === undefined){
+        return data === ''
+    }else{
+        try {      
+            localStorage .setItem(key, data)
+        } catch (error) {
+            console.log('Error saveing data');
+        }
     }
 }
 

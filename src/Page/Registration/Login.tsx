@@ -10,43 +10,46 @@ import telegram from '../../image/registration/telegram.svg'
 import vk from '../../image/registration/vk.svg'
 import youtube from '../../image/registration/youtube.svg'
 import clova01 from '../../image/registration/Сова-01 1.png'
-import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import AuthUserServices from '../../Redux/services/userAuth'
 
 import { toast } from 'react-toastify'
 
-export const Registration: React.FC = () => {
+import AuthUserServices, { selectAuth } from '../../Redux/services/userAuth'
+import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { siginSuccess } from '../../Redux/Slice/UserAuth'
+
+export const Login: React.FC = () => {
+  const { logedIn } = useSelector(selectAuth)
   const dispatch = useDispatch()
   const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
   const [password, setPassword] = useState('')
 
   const navigate = useNavigate()
 
-  const rigisterHandler = async (e: React.FormEventHandler<HTMLFormElement> | any) => {
+  const loginHandler = async (e: React.FormEventHandler<HTMLFormElement> | any) => {
     e.preventDefault()
 
-    const userRegister = new FormData()
-    userRegister.set('email', email)
-    userRegister.set('name', name)
-    userRegister.set('password', password)
-
+    const userLoginForm = new FormData()
+    userLoginForm.set('email', email)
+    userLoginForm.set('password', password)
     try {
-      const res = await AuthUserServices.userRegister(userRegister)
+      const res = await AuthUserServices.userLogin(userLoginForm)
+      console.log(res);
+      
+      dispatch(siginSuccess(res))
       toast.success(res.message)
     } catch (error: any) {
       console.log(error);
       toast.error(error.response.data.message)
     }
-    navigate('/login')
   }
 
-  // useEffect(() => {
-  //   if (logedIn) {
-  //     navigate('/login')
-  //   }
-  // }, [logedIn])
+  useEffect(() => {
+    if (logedIn) {
+      navigate('/')
+    }
+  }, [logedIn])
+
 
   return (
     <div className="registration">
@@ -55,8 +58,8 @@ export const Registration: React.FC = () => {
         <span className="registration__message">Войдите в систему или зарегистрируйтесь, если у вас ещё нет аккаунта</span>
       </div>
       <img src={clova01} alt="" className="registration__cova-image" />
-      <form onSubmit={rigisterHandler} className="registration__form">
-        <span className="registration__title">Регистрация</span>
+      <form onSubmit={loginHandler} className="registration__form">
+        <span className="registration__title">Логин</span>
         <img src={grayline} alt="" className="registration__gray-line" />
 
         <input
@@ -64,36 +67,27 @@ export const Registration: React.FC = () => {
           id="fname-input"
           className="registration__first-name"
           placeholder="Введите почта"
+          required
           onChange={e => setEmail(e.target.value)}
           value={email}
-          required
         />
 
         <input
-          type='password'
-          id="tel-input"
-          className="registration__first-name"
+          type="password"
+          id="name-input"
+          className="registration__name"
           placeholder="Введите пароль"
+          required
           onChange={e => setPassword(e.target.value)}
           value={password}
-          required
         />
 
-        <input
-          type="text"
-          id="name-input"
-          className="registration__first-name"
-          placeholder="Введите имя"
-          onChange={e => setName(e.target.value)}
-          value={name}
-          required
-        />
         <motion.button
           whileTap={{ scale: .9 }}
           className='add-acc'
-          onClick={() => navigate('/login')}
+          onClick={() => navigate('/registration')}
         >
-          У вас уже есть аккаунт?
+          Создать новый аккаунт
         </motion.button>
         <label htmlFor="" className="registration__desc">Войти с помощью соцсетей:</label>
         <div className="registration__social-icons">
@@ -103,7 +97,7 @@ export const Registration: React.FC = () => {
           <a href="#"><img src={youtube} alt="" className="registration__youtube" /></a>
           <a href="#"><img src={telegram} alt="" className="registration__box__social-icons__telegram" /></a>
         </div>
-        <motion.button whileTap={{ scale: .9 }} type="submit" className="registration__button">Регистрация</motion.button>
+        <motion.button whileTap={{ scale: .9 }} type="submit" className="registration__button">Логин</motion.button>
       </form>
     </div>
   )

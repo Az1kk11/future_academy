@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Home } from '../Page/Home'
-import { About, Activity, Career, Courses, Registration } from '../Page'
+import { About, Activity, Career, Courses, Login, Registration } from '../Page'
 
 const Rauters = () => {
     return (
@@ -12,7 +12,7 @@ const Rauters = () => {
         <Route path='/activity' element={<Activity/>}/>
         <Route path='/career' element={<Career/>}/>
         <Route path='/registration' element={<Registration/>}/>
-        <Route path='/login' element={<Registration/>}/>
+        <Route path='/login' element={<Login/>}/>
     </Routes>
   )
 }
