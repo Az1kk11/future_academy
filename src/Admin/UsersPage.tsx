@@ -63,7 +63,7 @@ export const UsersPage:React.FC = () => {
         </thead>
         <tbody>
           {users.map((item: usersType) => (
-            <tr>
+            <tr key={item.id}>
               <th>{item.id}</th>
               <th>{item.name}</th>
               <th>{item.email}</th>

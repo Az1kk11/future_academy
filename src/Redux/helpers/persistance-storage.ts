@@ -1,5 +1,4 @@
 export const setItem = (key: string, data: string) => {
-    console.log(key, data);
     if(data === undefined){
         return data === ''
     }else{
