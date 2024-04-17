@@ -1,7 +1,8 @@
 import { RootState } from "../store";
 import axios from "./api";
 
-const AuthUserServices = {
+const services = {
+    
     async adminLogin(phone: string, password: string) {
         const { data } = await axios.get(`/employee/login?password=${password}&phone=${phone}`)
         return data
@@ -26,6 +27,6 @@ const AuthUserServices = {
     }
 }
 
-export default AuthUserServices
+export default services
 
 export const selectAuth = (state: RootState) => state.AuthUser
