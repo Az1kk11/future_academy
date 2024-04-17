@@ -27,7 +27,7 @@ export const authUserSlice = createSlice({
             state.logedIn = true
             state.isLoading = false
             state.user = action.payload
-            setItem('tokenUser', action.payload.token)
+            setItem('token', action.payload.token)
         },
         signFailure: (state, action) => {
             state.isLoading = false
