@@ -5,7 +5,7 @@ axios.defaults.baseURL = 'https://futureskillshub.uz/api'
 
 axios.interceptors.request.use(config => {
 
-        const authorization = getItem('tokenUser') ? `Bearer ${getItem('tokenUser')}` : ''
+        const authorization = getItem('token') ? `Bearer ${getItem('token')}` : ''
         config.headers.Authorization = authorization
     
     return config
