@@ -1,14 +1,22 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Footer, Header } from '../components'
-import { Login, Registration } from '../Page'
 import Rauters from '../Routers'
 
 import '../index.css'
+import { LeftNavbar } from '../Admin'
+import { Login, Registration } from '../Page'
 
-const Layout:React.FC = () => {
+const Layout: React.FC = () => {
   const location = useLocation()
+  const navigate = useNavigate()
 
+  useEffect(() => {
+    if (location.pathname === '/admin') {
+      navigate('/admin/users')
+    }
+  }, [])
+  
   if (location.pathname.startsWith('/registration',)) {
     return <Registration />
   }
@@ -16,11 +24,17 @@ const Layout:React.FC = () => {
     return <Login />
   }
 
+
   return (
-    <div className="lay-box">
-      <Header />
-      <Rauters />
-      <Footer />
+    <div className={location.pathname.startsWith('/admin') ? 'layout' : 'lay-box'} >
+      {location.pathname.startsWith('/admin',) ? <LeftNavbar /> : ''}
+      <>
+        {location.pathname.startsWith('/admin',) ? '' :  <Header /> }
+        <>
+        <Rauters />
+        </>
+        {location.pathname.startsWith('/admin',) ? '' : <Footer />}
+      </>
     </div>
 
   )

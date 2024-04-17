@@ -130,7 +130,7 @@
 
 .career__holder-link {
     width: 258px;
-    height: 26px;
+    height: 56px;
     position: absolute;
     top: 380px;
     right: 1264px;
@@ -138,8 +138,7 @@
     left: 370px;
     font-size: 14px;
     font-weight: 700;
-    line-height: 26px;
-    letter-spacing: 0em;
+    line-height: 16px;
     text-align: center;
     background-color: #F7941D;
     border-radius: 10px;
@@ -392,7 +391,7 @@
 
 .career__employment-link {
     width: 258px;
-    height: 26px;
+    height: 56px;
     position: absolute;
     top: 350px;
     right: 817px;
@@ -400,7 +399,7 @@
     left: 817px;
     font-size: 14px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: 16px;
     letter-spacing: 0em;
     text-align: center;
     text-decoration: none;

@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
 
     const logoutHandler = () => {
         dispatch(logoutUser())
-        removeItem('token')
+        removeItem('tokenUser')
         navigate('/')
     }
 

@@ -19,3 +19,27 @@ a{
 li{
   list-style: none;
 }
+
+.layout {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(./image/Home.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.admin-login{
+  background: #FFFFFF !important;
+  margin-left: -80px;
+}
+.admin-login .registration__message{
+  right: 750px;
+}
