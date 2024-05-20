@@ -5,7 +5,7 @@ import { setItem } from "../helpers/persistance-storage";
 interface state {
     isLoading: boolean,
     logedIn: boolean,
-    user: null | any
+    user: null
     error: null
 }
 
@@ -26,7 +26,7 @@ export const authUserSlice = createSlice({
         siginSuccess: (state, action) => {
             state.logedIn = true
             state.isLoading = false
-            state.user = action.payload
+            state.user = action.payload.name
             setItem('token', action.payload.token)
         },
         signFailure: (state, action) => {

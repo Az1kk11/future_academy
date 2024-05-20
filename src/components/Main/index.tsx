@@ -25,9 +25,9 @@ export const Main: React.FC = () => {
                 <img src={Vector180} alt="" className="main__icon6" />
                 <img src={Vector181} alt="" className="main__icon7" />
                 <img src={bigcross} alt="" className="main__icon8" />
-                <div className="main__heading-1">Образовательная платформа</div>
-                <div className="main__heading-2">ХОД Future Academy</div>
-                <span className="main__heading-3">Актуальные знания для новичков и профессионалов</span>
+                <div className="main__heading-1">Future Academy'ǵa Xosh Kelipsiz!</div>
+                <div className="main__heading-2">Tálim Platforması</div>
+                <span className="main__heading-3">IT álemine birinshi qádemdi biz benen baslań!</span>
             </div>
         </main>
     )

@@ -5,7 +5,6 @@ import Rauters from '../Routers'
 
 import '../index.css'
 import { LeftNavbar } from '../Admin'
-import { Login, Registration } from '../Page'
 
 const Layout: React.FC = () => {
   const location = useLocation()
@@ -16,22 +15,14 @@ const Layout: React.FC = () => {
       navigate('/admin/users')
     }
   }, [])
-  
-  if (location.pathname.startsWith('/registration',)) {
-    return <Registration />
-  }
-  if (location.pathname.startsWith('/login',)) {
-    return <Login />
-  }
-
 
   return (
     <div className={location.pathname.startsWith('/admin') ? 'layout' : 'lay-box'} >
       {location.pathname.startsWith('/admin',) ? <LeftNavbar /> : ''}
       <>
-        {location.pathname.startsWith('/admin',) ? '' :  <Header /> }
+        {location.pathname.startsWith('/admin',) ? '' : <Header />}
         <>
-        <Rauters />
+          <Rauters />
         </>
         {location.pathname.startsWith('/admin',) ? '' : <Footer />}
       </>

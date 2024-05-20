@@ -6,7 +6,7 @@ import { removeItem } from '../Redux/helpers/persistance-storage'
 
 import './LeftNavbar.css'
 
-export const LeftNavbar:React.FC = () => {
+export const LeftNavbar: React.FC = () => {
     const [isOpen, setOpen] = useState(false)
     const toggle = () => setOpen(!isOpen)
     const navigate = useNavigate()
@@ -14,8 +14,9 @@ export const LeftNavbar:React.FC = () => {
     const location = useLocation()
 
     const logoutHandler = () => {
-        dispatch(logoutAdmin())
         removeItem('token')
+        removeItem('tokenAdmin')
+        dispatch(logoutAdmin())
         navigate('/admin-login')
     }
 

@@ -20,9 +20,8 @@ export const authSliceAdmin = createSlice({
             state.logedIn = true
             state.isLoading = false
             state.user = action.payload
-            console.log(action.payload);
-            
             setItem('token', action.payload)
+            setItem('tokenAdmin', action.payload)
         },
         logoutAdmin: state => {
             state.user = null

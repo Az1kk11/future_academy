@@ -16,6 +16,7 @@ import { useNavigate } from 'react-router-dom'
 import AuthUserServices from '../Redux/services/userAuth'
 import { selectAuthAdmin, siginAdminStart, siginAdminSuccess } from '../Redux/Slice/adminSlice'
 import { toast } from 'react-toastify'
+import { removeItem } from '../Redux/helpers/persistance-storage'
 
 const AdminLogin = () => {
     const { logedIn } = useSelector(selectAuthAdmin)
@@ -26,6 +27,9 @@ const AdminLogin = () => {
     
     const loginHandler = async (e: React.FormEventHandler<HTMLFormElement> | any) => {
         e.preventDefault()
+
+        removeItem('token')
+
         dispatch(siginAdminStart())
         try {
             const res = await AuthUserServices.adminLogin(password, phone)
@@ -51,7 +55,7 @@ const AdminLogin = () => {
             </div>
             <img src={clova01} alt="" className="registration__cova-image" />
             <form onSubmit={loginHandler} className="registration__form">
-                <span className="registration__title">Логин</span>
+                <span className="registration__title">Admin Логин</span>
                 <img src={grayline} alt="" className="registration__gray-line" />
 
                 <input
@@ -74,21 +78,7 @@ const AdminLogin = () => {
                     value={password}
                 />
 
-                <motion.button
-                    whileTap={{ scale: .9 }}
-                    className='add-acc'
-                    onClick={() => navigate('/registration')}
-                >
-                    Создать новый аккаунт
-                </motion.button>
-                <label htmlFor="" className="registration__desc">Войти с помощью соцсетей:</label>
-                <div className="registration__social-icons">
-                    <a href="#"><img src={vk} alt="" className="registration__vk" /></a>
-                    <a href="#"><img src={instagram} alt="" className="registration__instagram" /></a>
-                    <a href="#"><img src={facebook} alt="" className="registration__facebook" /></a>
-                    <a href="#"><img src={youtube} alt="" className="registration__youtube" /></a>
-                    <a href="#"><img src={telegram} alt="" className="registration__box__social-icons__telegram" /></a>
-                </div>
+                
                 <motion.button whileTap={{ scale: .9 }} type="submit" className="registration__button">Логин</motion.button>
             </form>
         </div>

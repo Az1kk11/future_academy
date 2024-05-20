@@ -380,7 +380,10 @@
     border-radius: 20px;
     position: relative;
 }
-
+.about__graduates-card .asad{
+    width: 120px;
+    border-radius: 50%;
+}
 .about__graduates-circle-icon {
     position: absolute;
     top: 20px;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Home } from '../Page/Home'
-import { About, Activity, Career, Courses, Login, Registration } from '../Page'
+import { About, Activity, Career, Courses, Registration } from '../Page'
 import AdminLogin from '../Admin/AdminLogin'
 import Protected from './protected'
 import { UsersPage } from '../Admin/UsersPage'
@@ -16,7 +16,6 @@ const Rauters = () => {
       <Route path='/activity' element={<Activity />} />
       <Route path='/career' element={<Career />} />
       <Route path='/registration' element={<Registration />} />
-      <Route path='/login' element={<Login />} />
 
       <Route path='admin-login' element={<AdminLogin />} />
       

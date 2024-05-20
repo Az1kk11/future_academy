@@ -17,6 +17,7 @@ import AuthUserServices, { selectAuth } from '../../Redux/services/userAuth'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { siginSuccess } from '../../Redux/Slice/UserAuth'
+import { removeItem } from '../../Redux/helpers/persistance-storage'
 
 export const Login: React.FC = () => {
   const { logedIn } = useSelector(selectAuth)
@@ -30,6 +31,7 @@ export const Login: React.FC = () => {
     e.preventDefault()
 
     const userLoginForm = new FormData()
+    removeItem('token')
     userLoginForm.set('email', email)
     userLoginForm.set('password', password)
     try {

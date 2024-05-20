@@ -22,41 +22,42 @@ import transparent from '../../image/widget/transparent.svg'
 import young from '../../image/widget/young.png'
 
 const detyArr = [
-    { category: 'dety', title: "Робототехника", link: '#' },
-    { category: 'dety', title: "Создание игр", link: '#' },
-    { category: 'dety', title: "Программирование", link: '#' },
-    { category: 'dety', title: "Мультимедиа", link: '#' },
-    { category: 'dety', title: "Soft skills", link: '#' },
-    { category: 'dety', title: "Шахматы", link: '#' },
-    { category: 'dety', title: "Блогинг", link: '#' },
-    { category: 'dety', title: "Создание игр", link: '#' },
-    { category: 'dety', title: "Программирование", link: '#' },
-    { category: 'dety', title: "Блогинг", link: '#' },
+    { category: 'dety', title: "Robototexnika", link: '#' },
+    { category: 'dety', title: "Oyın jaratıw", link: '#' },
+    { category: 'dety', title: "Scratch", link: '#' },
+    { category: 'dety', title: "Arduino", link: '#' },
+    { category: 'dety', title: "Lego Wedo", link: '#' },
+    { category: 'dety', title: "Python Tynker", link: '#' },
+    { category: 'dety', title: "Unity", link: '#' },
+    { category: 'dety', title: "Shaxmat", link: '#' },
+    { category: 'dety', title: "Programmalastırıw", link: '#' },
+    { category: 'dety', title: "IT English", link: '#' },
     { category: 'dety', title: "Soft skills", link: '#' },
 
-    { category: 'podrostki', title: "Web - разработка", link: '#' },
-    { category: 'podrostki', title: "Прикладное программирование", link: '#' },
-    { category: 'podrostki', title: "Графическое моделирование", link: '#' },
+    { category: 'podrostki', title: "Front-end", link: '#' },
+    { category: 'podrostki', title: "Back-end", link: '#' },
+    { category: 'podrostki', title: "Unity", link: '#' },
+    { category: 'podrostki', title: "Grafik Dizayn", link: '#' },
     { category: 'podrostki', title: "Game Development", link: '#' },
-    { category: 'podrostki', title: "Soft skills", link: '#' },
-    { category: 'podrostki', title: "Разработчик мобильных приложений", link: '#' },
-    { category: 'podrostki', title: "Блогинг", link: '#' },
-    { category: 'podrostki', title: "Создание игр", link: '#' },
-    { category: 'podrostki', title: "Программирование", link: '#' },
-    { category: 'podrostki', title: "Мультимедиа", link: '#' },
+    { category: 'podrostki', title: "Python", link: '#' },
+    { category: 'podrostki', title: "Android", link: '#' },
+    { category: 'podrostki', title: "С++ programmalastırıw", link: '#' },
+    { category: 'podrostki', title: "С# programmalastırıw", link: '#' },
+    { category: 'podrostki', title: "Kiber qáwipsizlik", link: '#' },
     { category: 'podrostki', title: "Soft skills", link: '#' },
 
-    { category: 'vzrosle', title: "Разработчик игр на Unity", link: '#' },
-    { category: 'vzrosle', title: "Разработка", link: '#' },
-    { category: 'vzrosle', title: "Графический Дизайн", link: '#' },
-    { category: 'vzrosle', title: "Тестировщик ПО", link: '#' },
-    { category: 'vzrosle', title: "Интернет Маркетинг", link: '#' },
-    { category: 'vzrosle', title: "Java-разработчик", link: '#' },
-    { category: 'vzrosle', title: "Python–разработчик", link: '#' },
-    { category: 'vzrosle', title: "IOS-разработчик", link: '#' },
-    { category: 'vzrosle', title: "Программирование", link: '#' },
+    { category: 'vzrosle', title: "Unity", link: '#' },
+    { category: 'vzrosle', title: "Full-stack", link: '#' },
+    { category: 'vzrosle', title: "Grafik dizayn", link: '#' },
+    { category: 'vzrosle', title: "Social Media Marketing", link: '#' },
+    { category: 'vzrosle', title: "Internet Marketing", link: '#' },
+    { category: 'vzrosle', title: "Java", link: '#' },
+    { category: 'vzrosle', title: "Python", link: '#' },
+    { category: 'vzrosle', title: "С# programmalastırıw", link: '#' },
+    { category: 'vzrosle', title: "C++ programmalastırıw", link: '#' },
+    { category: 'vzrosle', title: "Kiber qáwipsizlik", link: '#' },
+    { category: 'vzrosle', title: "Soft skills", link: '#' },
 ]
-
 type category = {
     category: string,
     title: string,
@@ -86,9 +87,9 @@ export const Widget: React.FC = () => {
             <div className="widget-messege">
                 <img src={Union} alt="" className="widget-message__union" />
                 <div className="widget-messege__text">
-                    <span className="widget-messege__title">Кем вы хотите стать?</span>
-                    <span className="widget-messege__desc">Пора найти себя <br />и выбрать подходящий курс :)</span>
-                    <span className="widget-messege__desc">Удачи!</span>
+                    <span className="widget-messege__title">Kim bolıwdı qáleysiz?</span>
+                    <span className="widget-messege__desc">Ózińizdi tabıw waqtı keldi ! <br /> Ózińizge unaǵan kurstı saylań :)</span>
+                    <span className="widget-messege__desc">Áwmet!</span>
                 </div>
             </div>
             <img src={cova} alt="" className="widget-messege__cova-img" />
@@ -98,22 +99,22 @@ export const Widget: React.FC = () => {
                     <div className={selectedCategory === 'dety' ? 'child-category active' : 'child-category'} onClick={() => setSelectedCategory('dety')}>
                         <img src={children} alt="" className="child-category__img" />
                         <div className="child-category__text">
-                            <span className="child-category__text1">Дети</span>
-                            <span className="child-category__text2">8 — 14 лет</span>
+                            <span className="child-category__text1">Balalar ushın</span>
+                            <span className="child-category__text2">8 — 14 jas</span>
                         </div>
                     </div>
                     <div className={selectedCategory === 'podrostki' ? 'child-category active' : 'child-category'} onClick={() => setSelectedCategory('podrostki')}>
                         <img src={young} alt="" className="child-category__img" />
                         <div className="child-category__text">
-                            <span className="child-category__text1">Подростки</span>
-                            <span className="child-category__text2">14 — 18 лет</span>
+                            <span className="child-category__text1">Óspirimler ushın</span>
+                            <span className="child-category__text2">14 — 18 jas</span>
                         </div>
                     </div>
                     <div className={selectedCategory === 'vzrosle' ? 'child-category active' : 'child-category'} onClick={() => setSelectedCategory('vzrosle')}>
                         <img src={familye} alt="" className="child-category__img" />
                         <div className="child-category__text">
-                            <span className="child-category__text1">Взрослые</span>
-                            <span className="child-category__text2">18 — ∞ </span>
+                            <span className="child-category__text1">Úlkenler ushın</span>
+                            <span className="child-category__text2">18 — ∞</span>
                         </div>
                     </div>
                 </div>
@@ -137,61 +138,60 @@ export const Widget: React.FC = () => {
                     <img src={transparent} alt="" className="widget__transparent" />
                     <img src={play} alt="" className="widget__play-icon" />
                 </div>
-                <p className="widget__gadgets-desc">Актуальные знания от признанных экспертов рынка <br /> для новичков и практикующих специалистов.</p>
+                <p className="widget__gadgets-desc">Jańa baslawshılar hám ámeliyatshılar ushın tanıqlı qánigelerdiń bilim hám kónlikpeleri.</p>
 
                 <div className="widget-result1">
-                    <span className="number"><CountUp end={600}/></span>
-                    <span className="text">Курсов</span>
+                    <span className="number"><CountUp end={600} /></span>
+                    <span className="text">Kurslar</span>
                 </div>
                 <div className="widget-result2">
-                    <span className="number"><CountUp end={82}/></span>
-                    <span className="text">Ведущих преподавателей</span>
+                    <span className="number"><CountUp end={82} /></span>
+                    <span className="text">Mentorlar</span>
                 </div>
                 <div className="widget-result3">
-                    <span className="number"><CountUp end={14795}/></span>
-                    <span className="text">Выпускников</span>
+                    <span className="number"><CountUp end={14795} /></span>
+                    <span className="text">Pitkeriwshiler</span>
                 </div>
             </div>
 
             <div className="widget-cards">
-                <div className="widget__openDay-card">
+            <div className="widget__openDay-card">
                     <div>
                         <span className="widget__openDay-number">25</span>
-                        <span className="widget__openDay-month">ноября</span>
+                        <span className="widget__openDay-month">Noyabr</span>
                     </div>
                     <div>
-                        <span className="widget__openDay-title">День открытых дверей </span>
-                        <span className="widget__openDay-desc">Приглашаем всех желающих на бесплатную экскурсию <br /> в мир востребованных профессий и полезных навыков</span>
+                        <span className="widget__openDay-title">Ashıq esikler kúni </span>
+                        <span className="widget__openDay-desc">Biz sizdi keleshek kásipleri  hám paydalı kónlikpeler <br/> álemine biypul ekskursiyaǵa shaqıramız!</span>
                     </div>
                     <a href="#" className="widget__openDay-link">
-                        Записаться
+                        Baylanıs
                         <img src={Vector137} alt="" />
                     </a>
                 </div>
                 <div className="widget__study-card">
                     <img src={monitor} alt="" className="widget__study-icon" />
-                    <span className="widget__study-title">Программы обучения</span>
-                    <span className="widget__study-desc">В списке наших курсов вы сможете найти профессию и занятие по душе, изучить новое и получить практические знания, которые помогут получить работу мечты.</span>
+                    <span className="widget__study-title">Oqıw baǵdarlaması</span>
+                    <span className="widget__study-desc">Biziń kurslarımız diziminde siz ózińizge jaqqan kásip hám iskerlikti tabıwıńız, jańa zatlardı úyreniwińiz hám maqsetlerińizge erisiwge járdem beretuǵın ámeliy bilimlerdi iyelewińiz múmkin.</span>
                     <a href="#" className="widget__study-link">
-                        Подробнее
+                        Kóbirek
                         <img src={Vector137} alt="" />
                     </a>
                 </div>
                 <div className="widget__news-card">
                     <img src={newspaper} alt="" className="widget__news-icon" />
-                    <span className="widget__news-title">Новости Академии</span>
+                    <span className="widget__news-title">Academiya Jańalıqları</span>
                 </div>
                 <div className="widget__itWorld-card">
                     <img src={diagram} alt="" className="widget__itWorld-icon" />
-                    <span className="widget__itWorld-title">Мир IT</span>
+                    <span className="widget__itWorld-title">IT Álemi</span>
                 </div>
                 <div className="widget__try-card">
                     <img src={Group837} alt="" className="widget__try-icon" />
                     <div>
-                        <span className="widget__try-title">Попробуй!</span>
+                        <span className="widget__try-title">Ózińizdi sınap kóriń!</span>
                         <span className="widget__try-desc">
-                            Пройдите тест и узнайте свои способности
-                            в сфере информационных технологий
+                        Informaciya texnologiyaları salasında sınaqtan ótiń hám qábiletińizdi bilip alıń! 
                         </span>
                     </div>
                 </div>
