@@ -37,10 +37,10 @@ export const Header: React.FC = () => {
                     </Link>
                 </li>
                 <li className="header__item">
-                    <Link to="/activity" className="header__link">Biz haqqımızda</Link>
+                    <Link to="/about" className="header__link">Biz haqqımızda</Link>
                 </li>
                 <li className="header__item">
-                    <Link to="/about" className="header__link">Is-ilajlar</Link>
+                    <Link to="/activity" className="header__link">Is-ilajlar</Link>
                 </li>
                 <li className="header__item">
                     <Link to="/career" className="header__link">Karera</Link>
