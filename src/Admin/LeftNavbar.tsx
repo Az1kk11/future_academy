@@ -54,7 +54,7 @@ export const LeftNavbar: React.FC = () => {
                     onClick={logoutHandler}
                 >
                     <i className="ri-logout-box-line"></i>
-                    <span style={{ display: isOpen ? 'block' : 'none' }}>Logout</span>
+                    <span style={{ display: isOpen ? 'block' : 'none' }}>Shıǵıw</span>
                 </li>
             </ul>
         </section>
@@ -62,5 +62,5 @@ export const LeftNavbar: React.FC = () => {
 }
 
 const navbarItems = [
-    { title: 'user', navigate: 'admin/users', icon: <i className="ri-user-fill"></i> },
+    { title: 'Oqıwshılar', navigate: 'admin/oqıwshılar', icon: <i className="ri-user-fill"></i> },
 ]

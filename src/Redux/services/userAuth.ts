@@ -24,6 +24,10 @@ const services = {
     async users() {
         const { data } = await axios.get('/users')
         return data
+    },
+    async userDel(id: number) {
+        const { data } = await axios.delete(`/user/delete/${id}`)
+        return data
     }
 }
 

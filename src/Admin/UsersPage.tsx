@@ -7,10 +7,10 @@ import { toast } from 'react-toastify';
 
 const thead = [
   { name: 'ID' },
-  { name: 'Name' },
-  { name: 'Email' },
-  { name: 'Created at' },
-  { name: 'Delete' },
+  { name: 'Ati' },
+  { name: 'Elektron poshta' },
+  { name: "Ashilg'an waqti" },
+  { name: "O'shiriw" },
 ]
 
 type usersType = {
@@ -22,10 +22,10 @@ type usersType = {
   updated_at: string
 }
 
-export const UsersPage:React.FC = () => {
+export const UsersPage: React.FC = () => {
   const [users, setUsers] = useState([])
 
-  const loginHandler = async () => {
+  const usersHandler = async () => {
     try {
       const res = await AuthUserServices.users()
       setUsers(res.data)
@@ -35,51 +35,60 @@ export const UsersPage:React.FC = () => {
     }
   }
 
-  useEffect(()=>{
-    loginHandler()
-  },[])
+  const deleteHandler = async (id: number) => {
+    try {
+      await AuthUserServices.userDel(id)
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
-  
-//   const deleteHandler = async (id: number) => {
-//     try {
-//         await ProductServices.productDelete(id)
-//         getProduct()
-//         toast.success('Categorie succesfuly deleted')
-//     } catch (error: any) {
-//         toast.error(error.response.data.message)
-//     }
-// }
+  useEffect(() => {
+    usersHandler()
+  }, [])
+
+
+  //   const deleteHandler = async (id: number) => {
+  //     try {
+  //         await ProductServices.productDelete(id)
+  //         getProduct()
+  //         toast.success('Categorie succesfuly deleted')
+  //     } catch (error: any) {
+  //         toast.error(error.response.data.message)
+  //     }
+  // }
 
   return (
 
-    <div className="res-table">
-      <table>
-        <thead>
-          <tr>
-            {thead?.map((item, index) => (
-              <th key={index}>{item?.name}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((item: usersType) => (
-            <tr key={item.id}>
-              <th>{item.id}</th>
-              <th>{item.name}</th>
-              <th>{item.email}</th>
-              <th>{format(new Date(item.created_at), 'dd MMM yyyy')}</th>
-              <td>
-                <button
-                  className='delete'
+    <div className="users-box">
+      <h3>Oqıwshılar dizimi</h3>
+      <div className="title-table">
+        {thead?.map((item, index) => (
+          <p key={index}>{item?.name}</p>
+        ))}
+      </div>
+      <div className="res-table">
+        <table>
+          <tbody>
+            {users.map((item: usersType) => (
+              <tr key={item.id}>
+                <th>{item.id}</th>
+                <th>{item.name}</th>
+                <th>{item.email}</th>
+                <th>{format(new Date(item.created_at), 'dd MMM yyyy')}</th>
+                <td>
+                  <button
+                    className='delete'
                   // onClick={() => deleteHandler(item.id)}
-                >
-                  <i className="ri-delete-bin-line"></i>
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+                  >
+                    <i className="ri-delete-bin-line"></i>
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }

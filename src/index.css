@@ -26,10 +26,7 @@ li{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-image: url(./image/Home.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #f2f4f5
 }
 
 ::-webkit-scrollbar {
@@ -37,9 +34,9 @@ li{
 }
 
 .admin-login{
-  background: #FFFFFF !important;
-  margin-left: -80px;
+  background: #fff !important;
 }
-.admin-login .registration__message{
-  right: 750px;
+.admin-login .registration__form{
+  margin-left: -230px;
+  margin-top: 70px;
 }

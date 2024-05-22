@@ -49,20 +49,15 @@ const AdminLogin = () => {
 
     return (
         <div className="registration admin-login">
-            <div>
-                <img src={Union} alt="" className="registration__union-icon" />
-                <span className="registration__message">Войдите в систему или зарегистрируйтесь, если у вас ещё нет аккаунта</span>
-            </div>
-            <img src={clova01} alt="" className="registration__cova-image" />
             <form onSubmit={loginHandler} className="registration__form">
-                <span className="registration__title">Admin Логин</span>
+                <span className="registration__title">Admin</span>
                 <img src={grayline} alt="" className="registration__gray-line" />
 
                 <input
                     type="text"
                     id="fname-input"
                     className="registration__first-name"
-                    placeholder="phone"
+                    placeholder="Login"
                     required
                     onChange={e => setPhone(e.target.value)}
                     value={phone}
@@ -72,14 +67,13 @@ const AdminLogin = () => {
                     type="password"
                     id="name-input"
                     className="registration__name"
-                    placeholder="password"
+                    placeholder="Parol"
                     required
                     onChange={e => setPassword(e.target.value)}
                     value={password}
                 />
 
-                
-                <motion.button whileTap={{ scale: .9 }} type="submit" className="registration__button">Логин</motion.button>
+                <motion.button whileTap={{ scale: .9 }} type="submit" className="registration__button">Kiriw</motion.button>
             </form>
         </div>
     )
