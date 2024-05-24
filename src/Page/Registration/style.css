@@ -153,3 +153,13 @@
 .registration .add-acc:hover{
   color: rgba(59, 59, 59, 0.767);
 }
+.registration .selectArr{
+  width: 380px;
+  height: 50px;
+  border-radius: 6px;
+  background-color: #dddfe6;
+  border: none;
+  margin-bottom: 36px;
+  padding-left: 15px;
+  font-size: 16px;
+}

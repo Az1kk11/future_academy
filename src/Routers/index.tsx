@@ -1,13 +1,11 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { Home } from '../Page/Home'
-import { About, Activity, Career, Courses, Registration } from '../Page'
-import AdminLogin from '../Admin/AdminLogin'
 import Protected from './protected'
-import { UsersPage } from '../Admin/UsersPage'
 
+import { About, Activity, Career, Courses, Home, Registration } from '../Page'
+import { AdminLogin, UserPut, UsersPage } from '../Admin'
 
-const Rauters = () => {
+const Rauters: React.FC = () => {
   return (
     <Routes>
       <Route path='/' element={<Home />} />
@@ -18,9 +16,10 @@ const Rauters = () => {
       <Route path='/registration' element={<Registration />} />
 
       <Route path='admin-login' element={<AdminLogin />} />
-      
+
       <Route element={<Protected />}>
-        <Route path='/admin/users' element={<UsersPage/>} />
+        <Route path='/admin/users' element={<UsersPage />} />
+        <Route path='/admin/users/:id' element={<UserPut />} />
       </Route>
     </Routes>
   )

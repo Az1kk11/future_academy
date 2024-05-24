@@ -4,25 +4,10 @@ import './style.css'
 import logo from '../../image/header/Logo.svg'
 import burger from '../../image/header/burger.svg'
 import person from '../../image/header/person.svg'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { selectAuth } from '../../Redux/services/userAuth'
-import { useDispatch, useSelector } from 'react-redux'
-import { logoutUser } from '../../Redux/Slice/UserAuth'
-import { removeItem } from '../../Redux/helpers/persistance-storage'
-
+import { Link, useLocation } from 'react-router-dom'
 
 export const Header: React.FC = () => {
-    const { logedIn, user } = useSelector(selectAuth)
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
     const location = useLocation()
-
-    const logoutHandler = () => {
-        removeItem('token')
-        removeItem('tokenAdmin')
-        dispatch(logoutUser())
-        navigate('/')
-    }
 
     return (
         <div className="header">
@@ -48,25 +33,17 @@ export const Header: React.FC = () => {
                 {/* <li className="header__item">
                     <span className="header__link">8 800 950-33-98</span>
                 </li> */}
-                {logedIn ?
-                    <li className='header__item'>
-                        <div className="profile-user">
-                            <span className='header__link person-link'>{user}</span>
-                            <button className='log-out' onClick={logoutHandler}>Log out</button>
-                        </div>
-                    </li>
-                    :
-                    <li className="header__item">
-                        {location.pathname.startsWith('/registration') ?
-                            ''
-                            :
-                            <Link to="/registration" className="header__link person-link">
-                                <img className="person__icon" src={person} alt="" />
-                                Registraciya
-                            </Link>
-                        }
-                    </li>
-                }
+                <li className="header__item">
+                    {location.pathname.startsWith('/registration') ?
+                        ''
+                        :
+                        <Link to="/registration" className="header__link person-link">
+                            <img className="person__icon" src={person} alt="" />
+                            Registraciya
+                        </Link>
+                    }
+                </li>
+
             </ul>
         </div>
     )

@@ -1,28 +1,25 @@
 import React, { useEffect } from 'react'
 import Layout from './Layouts'
 import { useDispatch, useSelector } from 'react-redux'
-import AuthUserServices, { selectAuth } from './Redux/services/userAuth'
-import { siginSuccess } from './Redux/Slice/UserAuth'
+import AuthUserServices from './Redux/services/userAuth'
 import { getItem } from './Redux/helpers/persistance-storage'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { selectAuthAdmin, siginAdminSuccess } from './Redux/Slice/adminSlice'
 
 const App: React.FC = () => {
-  const dispatch = useDispatch()
-  const { logedIn } = useSelector(selectAuth)
+  const { logedIn } = useSelector(selectAuthAdmin)
 
   const getUser = async () => {
     try {
-      const res = await AuthUserServices.getme()
-      dispatch(siginSuccess(res))
+      await AuthUserServices.getme()
     } catch (error) {
       console.log(error);
     }
   }
 
-  // if(getItem('token') === '')
-
   useEffect(() => {
-    getUser()
+    if (getItem('tokenAdmin')) {
+      getUser()
+    }
   }, [logedIn])
 
   return <Layout />

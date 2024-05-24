@@ -4,33 +4,38 @@ import { format } from 'date-fns';
 
 import './UsersPage.css'
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 const thead = [
   { name: 'ID' },
-  { name: 'Ati' },
-  { name: 'Elektron poshta' },
-  { name: "Ashilg'an waqti" },
+  { name: 'Atı' },
+  { name: 'Elektron poshtası' },
+  { name: "Tan'lag'an kursı" },
+  { name: "Ashılg'an waqtı" },
+  { name: "Ozgeris kiritilgen waqtı" },
   { name: "O'shiriw" },
+  { name: "Ozgeris kiritiw" },
 ]
 
-type usersType = {
+export type usersType = {
   id: number,
   name: string,
   email: string,
+  course: string
   created_at: string,
-  remember_token: string,
   updated_at: string
 }
 
 export const UsersPage: React.FC = () => {
   const [users, setUsers] = useState([])
+  const navigate = useNavigate()
 
   const usersHandler = async () => {
     try {
       const res = await AuthUserServices.users()
       setUsers(res.data)
     } catch (error: any) {
-      toast.error(error.message)
       console.log(error);
     }
   }
@@ -45,21 +50,9 @@ export const UsersPage: React.FC = () => {
 
   useEffect(() => {
     usersHandler()
-  }, [])
-
-
-  //   const deleteHandler = async (id: number) => {
-  //     try {
-  //         await ProductServices.productDelete(id)
-  //         getProduct()
-  //         toast.success('Categorie succesfuly deleted')
-  //     } catch (error: any) {
-  //         toast.error(error.response.data.message)
-  //     }
-  // }
+  }, [deleteHandler])
 
   return (
-
     <div className="users-box">
       <h3>Oqıwshılar dizimi</h3>
       <div className="title-table">
@@ -75,13 +68,23 @@ export const UsersPage: React.FC = () => {
                 <th>{item.id}</th>
                 <th>{item.name}</th>
                 <th>{item.email}</th>
+                <th>{item.course}</th>
                 <th>{format(new Date(item.created_at), 'dd MMM yyyy')}</th>
+                <th>{format(new Date(item.updated_at), 'dd MMM yyyy')}</th>
                 <td>
                   <button
                     className='delete'
-                  // onClick={() => deleteHandler(item.id)}
+                    onClick={() => deleteHandler(item.id)}
                   >
                     <i className="ri-delete-bin-line"></i>
+                  </button>
+                </td>
+                <td>
+                  <button
+                    className='put'
+                    onClick={() => navigate(`/admin/users/${item.id}`)}
+                  >
+                    <i className="ri-pencil-line"></i>
                   </button>
                 </td>
               </tr>

@@ -62,5 +62,5 @@ export const LeftNavbar: React.FC = () => {
 }
 
 const navbarItems = [
-    { title: 'Oqıwshılar', navigate: 'admin/oqıwshılar', icon: <i className="ri-user-fill"></i> },
+    { title: 'Oqıwshılar', navigate: 'admin/users', icon: <i className="ri-user-fill"></i> },
 ]

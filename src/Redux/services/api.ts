@@ -1,13 +1,13 @@
 import axios from "axios";
 import { getItem } from "../helpers/persistance-storage";
 
-axios.defaults.baseURL = 'https://futureskillshub.uz/api'
+axios.defaults.baseURL = 'https://backend.futureskillshub.uz/api'
 
 axios.interceptors.request.use(config => {
 
-        const authorization = getItem('token') ? `Bearer ${getItem('token')}` : ''
-        config.headers.Authorization = authorization
-    
+    const authorization = getItem('tokenAdmin') ? `Bearer ${getItem('tokenAdmin')}` : ''
+    config.headers.Authorization = authorization
+
     return config
 })
 

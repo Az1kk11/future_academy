@@ -1,16 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-
-import Union from '../image/registration/Union.png'
-import facebook from '../image/registration/facebook.svg'
 import grayline from '../image/registration/grayline.svg'
-import instagram from '../image/registration/instagram.svg'
-import telegram from '../image/registration/telegram.svg'
-import vk from '../image/registration/vk.svg'
-import youtube from '../image/registration/youtube.svg'
-import clova01 from '../image/registration/Сова-01 1.png'
-
-import '../Page/Registration/style.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import AuthUserServices from '../Redux/services/userAuth'
@@ -18,11 +8,12 @@ import { selectAuthAdmin, siginAdminStart, siginAdminSuccess } from '../Redux/Sl
 import { toast } from 'react-toastify'
 import { removeItem } from '../Redux/helpers/persistance-storage'
 
-const AdminLogin = () => {
+
+export const AdminLogin = () => {
     const { logedIn } = useSelector(selectAuthAdmin)
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const [ phone, setPhone ] = useState<string>('')
+    const [ email, setEmail ] = useState<string>('')
     const [ password, setPassword ] = useState<string>('')
     
     const loginHandler = async (e: React.FormEventHandler<HTMLFormElement> | any) => {
@@ -31,8 +22,11 @@ const AdminLogin = () => {
         removeItem('token')
 
         dispatch(siginAdminStart())
+        const adminLoginArr = new FormData();
+        adminLoginArr.set('email', email)
+        adminLoginArr.set('password', password)
         try {
-            const res = await AuthUserServices.adminLogin(password, phone)
+            const res = await AuthUserServices.adminLogin(adminLoginArr)
             dispatch(siginAdminSuccess(res.token))
             toast.success(res.message)
         } catch (error: any) {
@@ -59,8 +53,8 @@ const AdminLogin = () => {
                     className="registration__first-name"
                     placeholder="Login"
                     required
-                    onChange={e => setPhone(e.target.value)}
-                    value={phone}
+                    onChange={e => setEmail(e.target.value)}
+                    value={email}
                 />
 
                 <input
@@ -78,5 +72,3 @@ const AdminLogin = () => {
         </div>
     )
 }
-
-export default AdminLogin

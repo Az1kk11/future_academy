@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import './style.css'
+import React, { ChangeEvent, useState } from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
+import AuthUserServices from '../../Redux/services/userAuth'
+import { toast } from 'react-toastify'
 
 import Union from '../../image/registration/Union.png'
 import facebook from '../../image/registration/facebook.svg'
@@ -10,22 +12,41 @@ import telegram from '../../image/registration/telegram.svg'
 import vk from '../../image/registration/vk.svg'
 import youtube from '../../image/registration/youtube.svg'
 import clova01 from '../../image/registration/Сова-01 1.png'
-import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import AuthUserServices from '../../Redux/services/userAuth'
 
-import { toast } from 'react-toastify'
-import { removeItem } from '../../Redux/helpers/persistance-storage'
-import { siginSuccess } from '../../Redux/Slice/UserAuth'
+import './style.css'
+
+export const coursesArr = [
+  "Robototexnika",
+  "Oyın jaratıw",
+  "Scratch",
+  "Arduino",
+  "Lego Wedo",
+  "Python Tynker",
+  "Unity",
+  "Shaxmat",
+  "Programmalastırıw",
+  "IT English",
+  "Front-end",
+  "Back-end",
+  "Grafik Dizayn",
+  "Game Development",
+  "Python",
+  "Android",
+  "С++ programmalastırıw",
+  "С# programmalastırıw",
+  "Kiber qáwipsizlik",
+  "Soft skills",
+  "Full-stack",
+  "Social Media Marketing",
+  "Internet Marketing",
+  "Java",
+]
 
 export const Registration: React.FC = () => {
-  const dispatch = useDispatch()
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
-  const [password, setPassword] = useState('')
-  const [lore, setLore] = useState(false)
+  const [courses, setCourses] = useState('')
   const navigate = useNavigate()
-  
 
   const rigisterHandler = async (e: React.FormEventHandler<HTMLFormElement> | any) => {
     e.preventDefault()
@@ -33,36 +54,17 @@ export const Registration: React.FC = () => {
     const userRegister = new FormData()
     userRegister.set('email', email)
     userRegister.set('name', name)
-    userRegister.set('password', password)
+    userRegister.set('course', courses)
 
     try {
       const res = await AuthUserServices.userRegister(userRegister)
       toast.success(res.message)
-      if (res?.message === 'Successful created') {
-        setLore(lore)
-      } else {
-        setLore(!lore)
+      if (res.message === 'Sucessfully registered') {
+        navigate('/')
       }
     } catch (error: any) {
       console.log(error);
-      toast.error(error.response.data.message)
-    }
-  }
-
-  const loginHandler = async (e: React.FormEventHandler<HTMLFormElement> | any) => {
-    e.preventDefault()
-
-    const userLoginForm = new FormData()
-    userLoginForm.set('email', email)
-    userLoginForm.set('password', password)
-    try {
-      const res = await AuthUserServices.userLogin(userLoginForm)
-      dispatch(siginSuccess(res))
-      toast.success(res.message)
-      navigate('/')
-    } catch (error: any) {
-      console.log(error);
-      toast.error(error.response.data.message)
+      toast.error(error.message)
     }
   }
 
@@ -73,100 +75,52 @@ export const Registration: React.FC = () => {
         <span className="registration__message">Siz Future Academy'di saylap adaspadıńız! Biz sizge sapalı bilim beremiz</span>
       </div>
       <img src={clova01} alt="" className="registration__cova-image" />
-      {lore ?
-        <form onSubmit={loginHandler} className="registration__form">
-          <span className="registration__title">Логин</span>
-          <img src={grayline} alt="" className="registration__gray-line" />
 
-          <input
-            type="text"
-            id="fname-input"
-            className="registration__first-name"
-            placeholder="Введите почта"
-            required
-            onChange={e => setEmail(e.target.value)}
-            value={email}
-          />
+      <form onSubmit={rigisterHandler} className="registration__form">
+        <span className="registration__title">Kursqa registraciyadan ótiw</span>
+        <img src={grayline} alt="" className="registration__gray-line" />
 
-          <input
-            type="password"
-            id="name-input"
-            className="registration__name"
-            placeholder="Введите пароль"
-            required
-            onChange={e => setPassword(e.target.value)}
-            value={password}
-          />
+        <input
+          type="text"
+          id="fname-input"
+          className="registration__first-name"
+          placeholder="Elektron poshtan'ız"
+          onChange={e => setEmail(e.target.value)}
+          value={email}
+          required
+        />
 
-          <motion.button
-            whileTap={{ scale: .9 }}
-            className='add-acc'
-            onClick={() => setLore(false)}
-          >
-            Создать новый аккаунт
-          </motion.button>
-          <label htmlFor="" className="registration__desc">Войти с помощью соцсетей:</label>
-          <div className="registration__social-icons">
-            <a href="#"><img src={vk} alt="" className="registration__vk" /></a>
-            <a href="#"><img src={instagram} alt="" className="registration__instagram" /></a>
-            <a href="#"><img src={facebook} alt="" className="registration__facebook" /></a>
-            <a href="#"><img src={youtube} alt="" className="registration__youtube" /></a>
-            <a href="#"><img src={telegram} alt="" className="registration__box__social-icons__telegram" /></a>
-          </div>
-          <motion.button whileTap={{ scale: .9 }} type="submit" className="registration__button">Логин</motion.button>
-        </form>
-        :
-        <form onSubmit={rigisterHandler} className="registration__form">
-          <span className="registration__title">Kursqa registraciyadan ótiw</span>
-          <img src={grayline} alt="" className="registration__gray-line" />
+        <input
+          type="text"
+          id="name-input"
+          className="registration__first-name"
+          placeholder="Atın'ız"
+          onChange={e => setName(e.target.value)}
+          value={name}
+          required
+        />
 
-          <input
-            type="text"
-            id="fname-input"
-            className="registration__first-name"
-            placeholder="Введите почта"
-            onChange={e => setEmail(e.target.value)}
-            value={email}
-            required
-          />
+        <select
+          onChange={(e: ChangeEvent | any) => setCourses(e.target.value)}
+          className='selectArr'
+          required
+        >
+          {coursesArr.map(item => (
+            <option key={item} value={item}>{item}</option>
+          ))}
+        </select>
 
-          <input
-            type='password'
-            id="tel-input"
-            className="registration__first-name"
-            placeholder="Введите пароль"
-            onChange={e => setPassword(e.target.value)}
-            value={password}
-            required
-          />
+        <label htmlFor="" className="registration__desc"> Bizdin' social tarmaqlarımızdı guzetip barin</label>
+        <div className="registration__social-icons">
+          <a href="#"><img src={vk} alt="" className="registration__vk" /></a>
+          <a href="#"><img src={instagram} alt="" className="registration__instagram" /></a>
+          <a href="#"><img src={facebook} alt="" className="registration__facebook" /></a>
+          <a href="#"><img src={youtube} alt="" className="registration__youtube" /></a>
+          <a href="#"><img src={telegram} alt="" className="registration__box__social-icons__telegram" /></a>
+        </div>
+        <motion.button whileTap={{ scale: .9 }} type="submit" className="registration__button">Dizimge alıw</motion.button>
+      </form>
 
-          <input
-            type="text"
-            id="name-input"
-            className="registration__first-name"
-            placeholder="Введите имя"
-            onChange={e => setName(e.target.value)}
-            value={name}
-            required
-          />
-          <motion.button
-            whileTap={{ scale: .9 }}
-            className='add-acc'
-            onClick={() => setLore(true)}
-          >
-            У вас уже есть аккаунт?
-          </motion.button>
-          <label htmlFor="" className="registration__desc">Войти с помощью соцсетей:</label>
-          <div className="registration__social-icons">
-            <a href="#"><img src={vk} alt="" className="registration__vk" /></a>
-            <a href="#"><img src={instagram} alt="" className="registration__instagram" /></a>
-            <a href="#"><img src={facebook} alt="" className="registration__facebook" /></a>
-            <a href="#"><img src={youtube} alt="" className="registration__youtube" /></a>
-            <a href="#"><img src={telegram} alt="" className="registration__box__social-icons__telegram" /></a>
-          </div>
-          <motion.button whileTap={{ scale: .9 }} type="submit" className="registration__button">Регистрация</motion.button>
-        </form>
-      }
     </div>
   )
 }

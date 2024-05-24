@@ -1,3 +1,4 @@
+export * from './Home/index'
 export * from './About/index'
 export * from './Activity/index'
 export * from './Career/index'
