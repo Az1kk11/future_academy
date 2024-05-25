@@ -109,7 +109,7 @@ export const About: React.FC = () => {
                         </div>
                         <div className="about__inner-box">
                             <img src={book} alt="" />
-                            <span className="about__inner-text">Rawajlanıw ilmga bolǵan muhabbattan kelip shıǵadı </span>
+                            <span className="about__inner-text">Rawajlanıw ilmga bolǵan talpınıstan kelip shıǵadı </span>
                         </div>
                         <div className="about__inner-box">
                             <img src={technology} alt="" />

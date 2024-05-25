@@ -110,7 +110,7 @@ export const Registration: React.FC = () => {
           ))}
         </select>
 
-        <label htmlFor="" className="registration__desc"> Bizdin' social tarmaqlarımızdı guzetip barin</label>
+        <label htmlFor="" className="registration__desc"> Bizdin' social tarmaqlarımızdı gúzetip barıń!</label>
         <div className="registration__social-icons">
           <a href="#"><img src={vk} alt="" className="registration__vk" /></a>
           <a href="#"><img src={instagram} alt="" className="registration__instagram" /></a>
