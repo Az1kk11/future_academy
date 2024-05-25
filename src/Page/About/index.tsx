@@ -93,18 +93,18 @@ export const About: React.FC = () => {
                     <div className="about__inner">
                         <div className="about__inner-box">
                             <img src={Group} alt="" />
-                            <span className="about__inner-text">Trening mazmunı tiyisli bolıwı kerek hám metodologiya jıllar dawamında tastıyıqlanǵan.</span>
+                            <span className="about__inner-text">Trening mazmunı aktual hám metodologiya jıllar dawamında tastıyıqlanǵan.</span>
                         </div>
                         <div className="about__inner-box">
                             <img src={teacher} alt="" />
                             <span className="about__inner-text">
-                                Oqıtıwshı, birinshi náwbette, maman hám xarizmatik shaxs bolıp tabıladı.
+                                Mentorlar - maman hám xarizmatik shaxs bolıp tabıladı.
                             </span>
                         </div>
                         <div className="about__inner-box">
                             <img src={children} alt="" />
                             <span className="about__inner-text">
-                                Tálimdiń rawajlanıw noqatı - bul bala, onıń qızıǵıwshılıqları hám mútajlikleri
+                                Tálimniń rawajlanıw noqatı - bul bala, onıń qızıǵıwshılıqları hám mútajliklerine qaratılg'an
                             </span>
                         </div>
                         <div className="about__inner-box">
@@ -113,7 +113,7 @@ export const About: React.FC = () => {
                         </div>
                         <div className="about__inner-box">
                             <img src={technology} alt="" />
-                            <span className="about__inner-text">Texnologiyalar dúnyanı basqaradi hám adamlar bul texnologiyalardı jaratadı </span>
+                            <span className="about__inner-text">Texnologiyalar adamlarg'a xizmet etedi hám adamlar bul texnologiyalardı jaratadı </span>
                         </div>
                     </div>
                 </div>
@@ -144,13 +144,13 @@ export const About: React.FC = () => {
                         <div className="about__graduates-card">
                             <img src={graduatesCircle} alt="" className="about__graduates-circle-icon" />
                             <img src={avatar3} alt="" className="about__graduates-picture asad" />
-                            <span className="about__graduates-name">Aziza Saparbaeva</span>
+                            <span className="about__graduates-name">Juldizay Aqılbekova</span>
                             <span className="about__graduates-desc">Grafik Dizayn Kursı Mentorı</span>
                         </div>
                         <div className="about__graduates-card">
                             <img src={graduatesCircle} alt="" className="about__graduates-circle-icon" />
                             <img src={avatar4} alt="" className="about__graduates-picture asad" />
-                            <span className="about__graduates-name">Neyla Utepova</span>
+                            <span className="about__graduates-name">Shuxrat Aymurzaev</span>
                             <span className="about__graduates-desc">Python Kursı Mentorı</span>
                         </div>
                     </div>

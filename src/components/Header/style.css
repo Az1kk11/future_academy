@@ -1,15 +1,10 @@
 .header {
-    /* top: 0;
-    left: 0; */
     width: 1920px;
     height: 110px;
     display: flex;
     align-items: center;
-    /* justify-content: space-around; */
     color: var(--blueColor);
-    background-color: #fff;
-    /* position: fixed; */
-    
+    background-color: #fff;    
 }
 
 .header__logo {
@@ -21,7 +16,7 @@
 }
 
 .header__list {
-    margin-left: 63px;
+    margin-left: 163px;
     display: flex;
     align-items: center;
     justify-content: space-between;

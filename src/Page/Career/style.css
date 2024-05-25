@@ -144,8 +144,7 @@
     border-radius: 10px;
     text-decoration: none;
     color: #FFFFFF;
-    padding: 21px 15px 12px 13px;
-    
+    padding: 12px 15px 12px 13px;
 }
 
 .career__wrapper {
@@ -266,6 +265,7 @@
 .career__tagline-result {
     display: flex;
     gap: 66px;
+    width: 150vh;
 }
 
 .career__tagline-vacancy {
@@ -273,6 +273,7 @@
     height: 140.84px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.84px;
 }
 
@@ -281,11 +282,12 @@
     height: 159.84px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2.84px;
 }
 
 .career__tagline-salary {
-    width: 345px;
+    width: auto;
     height: 175px;
     display: flex;
     flex-direction: column;
@@ -297,7 +299,6 @@
 .career__salary-number {
     font-size: 86px;
     font-weight: 700;
-    line-height: 105px;
     letter-spacing: 0.095em;
     text-align: left;
 }
@@ -309,7 +310,7 @@
     font-weight: 500;
     line-height: 34px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
 }
 
 .career__employment {
@@ -407,7 +408,7 @@
     background-color: orange;
     color: #FFFFFF;
     border-radius: 6px;
-    padding: 21px 15px 13px 13px;
+    padding: 12px 15px 13px 13px;
 }
 
 .career__vacancy {

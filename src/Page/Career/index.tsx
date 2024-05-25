@@ -41,7 +41,7 @@ export const Career: React.FC = () => {
                 <img src={MaskGroup} alt="" className="career__holder-picture1" />
                 <img src={MaskGroup1} alt="" className="career__holder-picture2" />
                 <img src={MaskGroup2} alt="" className="career__holder-picture3" />
-                <a href="#" className="career__holder-link">reypnazarovanazira@gmail.com</a>
+                <a href="reypnazarovanazira@gmail.com" className="career__holder-link">Jumısqa jaylasıw haqqında soraw beriw</a>
             </div>
 
             <div className="career__wrapper">
@@ -111,7 +111,7 @@ export const Career: React.FC = () => {
                         <span className="career__employment-text">IT ortalıǵında aktiv qatnasıń, jańa baylanıslar ornatıwıńız hám tarawdıń qánigeleri menen tájiriybe almaslawıńız múmkin bolǵan ushırasıwlar, konferenciyalar hám basqa ilajlarda qatnasıń.</span>
                     </div>
                 </div>
-                <a href="#" className="career__employment-link">reypnazarovanazira@gmail.com</a>
+                <a href="reypnazarovanazira@gmail.com" className="career__employment-link">Jumısqa jaylasıw haqqında soraw beriw</a>
             </div>
 
             <div className="career__vacancy">
@@ -139,7 +139,7 @@ export const Career: React.FC = () => {
                     </div>
                     <div className="career__vacancy-card vacancy-card5">
                         <span className="career__vacancy-title">Full Stack programmist</span>
-                        <span className="career__vacancy-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis tellus feugiat, posuere magna et, scelerisque leo. </span>
+                        <span className="career__vacancy-desc">Talaplar TypeScript, React, MobX, NextJS, Tailwind, Hasura, PostgreSQL, Vercel, Hasura.io, Neon, Bitbucket,</span>
                         <span className="career__vacancy-salary">$2500-3000</span>
                     </div>
                 </div>
