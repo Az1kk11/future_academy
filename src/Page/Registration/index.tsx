@@ -94,7 +94,7 @@ export const Registration: React.FC = () => {
           type="text"
           id="name-input"
           className="registration__first-name"
-          placeholder="Atın'ız"
+          placeholder="F. A. Á"
           onChange={e => setName(e.target.value)}
           value={name}
           required

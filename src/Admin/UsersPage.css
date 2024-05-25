@@ -17,30 +17,30 @@
   margin-bottom: 5px;
 }
 .users-box .title-table p:nth-child(1) {
-  margin-left: 90px;
+  margin-left: 120px;
 }
 .users-box .title-table p:nth-child(2) {
-  margin-left: 50px;
+  margin-left: 75px;
 }
 .users-box .title-table p:nth-child(3) {
-  margin-left: 100px;
+  margin-left: 115px;
 }
 .users-box .title-table p:nth-child(4) {
-  margin-left: 110px;
+  margin-left: 200px;
 }
 .users-box .title-table p:nth-child(5) {
-  margin-left: 65px;
+  margin-left: 100px;
 }
 .users-box .title-table p:nth-child(6) {
-  margin-left: 40px;
+  margin-left: 115px;
   width: 150px;
   text-align: center;
 }
 .users-box .title-table p:nth-child(7) {
-  margin-left: 25px;
+  margin-left: 130px;
 }
 .users-box .title-table p:nth-child(8) {
-  margin-left: 0px;
+  margin-left: 15px;
   width: 100px;
   text-align: center;
 }
@@ -79,6 +79,7 @@
 }
 .res-table table td button i {
   color: #222;
+  font-size: 20px;
 }
 .res-table table td button:hover {
   background-color: #f8d57e;

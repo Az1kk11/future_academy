@@ -6,7 +6,7 @@ import Rauters from '../Routers'
 import '../index.css'
 import { LeftNavbar } from '../Admin'
 
-const Layout: React.FC = () => {
+export const Layout: React.FC = () => {
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -30,5 +30,3 @@ const Layout: React.FC = () => {
 
   )
 }
-
-export default Layout

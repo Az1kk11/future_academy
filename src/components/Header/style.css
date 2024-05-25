@@ -5,9 +5,11 @@
     height: 110px;
     display: flex;
     align-items: center;
+    /* justify-content: space-around; */
     color: var(--blueColor);
     background-color: #fff;
     /* position: fixed; */
+    
 }
 
 .header__logo {
@@ -22,12 +24,12 @@
     margin-left: 63px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 60px;
 }
 
 .header__link{
-    font-size: 14px;
+    font-size: 18px;
     color: var(--blueColor);
     font-family: 'Montserrat';
     font-weight: 500;

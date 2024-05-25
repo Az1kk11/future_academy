@@ -1,6 +1,6 @@
 import React from 'react'
-import './style.css'
-
+import { Main } from '../../components'
+import CountUp from 'react-countup'
 import Avito from '../../image/about/Avito.png'
 import BigCross from '../../image/about/BigCross.svg'
 import CenterImage from '../../image/about/CenterImage.png'
@@ -11,15 +11,13 @@ import GradientTriangle from '../../image/about/GradientTriangle.svg'
 import Group from '../../image/about/Group.svg'
 import PlayButton from '../../image/about/PlayButton.svg'
 import Union from '../../image/about/Union.svg'
-import Vector198 from '../../image/about/Vector 198.svg'
 import Vector1 from '../../image/about/Vector1.svg'
 import Vector2 from '../../image/about/Vector2.svg'
 import WhiteLine from '../../image/about/WhiteLine.svg'
 import alfabank from '../../image/about/alfabank.png'
-import avatar1 from '../../image/about/avatar1.png'
-import avatar2 from '../../image/about/avatar2.png'
-import avatar3 from '../../image/about/avatar3.png'
-import avatar4 from '../../image/about/avatar4.png'
+import avatar2 from '../../image/about/photo_1_2024-05-25_16-39-09.jpg'
+import avatar3 from '../../image/about/photo_3_2024-05-25_16-39-09.jpg'
+import avatar4 from '../../image/about/photo_2_2024-05-25_16-39-09.jpg'
 import bigTriangle from '../../image/about/big-triangle.svg'
 import book from '../../image/about/book.svg'
 import budget from '../../image/about/budget.svg'
@@ -36,12 +34,12 @@ import teacher from '../../image/about/teacher.svg'
 import technology from '../../image/about/technology.svg'
 import tinkof from '../../image/about/tinkof.png'
 import triangle from '../../image/about/triangle.svg'
-import unsplash_KIPqvvTOC1s from '../../image/about/unsplash_KIPqvvTOC1s.png'
 import vk from '../../image/about/vk.png'
 import slova from '../../image/about/Сова-01 1.svg'
-import { Main } from '../../components'
-
+import cre from '../../image/about/photo_2024-05-25_16-33-20.jpg'
 import asad from "../../image/about/Asad.jpg"
+
+import './style.css'
 
 export const About: React.FC = () => {
     return (
@@ -80,14 +78,13 @@ export const About: React.FC = () => {
 
                 <div className="about__found">
                     <div className="about__founded">
-                        <img src={unsplash_KIPqvvTOC1s} alt="" className="about__founded-image" />
-                        <span className="about__founded-name">Имя Фамилия</span>
-                        <span className="about__founded-title">Основатель Академии будущего ХОД</span>
+                        <img src={cre} alt="" className="about__founded-image" />
+                        <span className="about__founded-name">Utemuratov R</span>
                     </div>
                     <div className="about__desc">
-                        «Все началось с любви к шахматам. Я хотел предвидеть ход противника, хотел просчитать его действия, хотел побеждать. Я не стал гением шахмат, но стратег и психолог из меня неплохой» - смеется Иван Иванович. Идея открыть Академию шахмат пришла к нему в 2020 году, когда в период полного локдауна он вдруг вспомнил про хобби - игру в шахматы. Оказалось, что для игры в шахматы сейчас и доска-то не обязательна, все есть в телефоне. Племянник (сын?) Ивана Ивановича большую часть дня проводил в стрелялках на планшете. <br /> «Я показал ему шахматы. К июню он уже был неплохим соперником» - Вскоре идея небольшой академии шахмат превратилась в план создания Академии Будущего, где дети смогут учиться тому, что им нравится, а взрослые попытаются изменить жизнь. Уж очень это сейчас актуально".
+                        Hámmesi shaxmatqa bolǵan qızıǵıwshılıqlarımnan baslanǵan. Men dushpannıń háreketin aldınan bilejaq edim, onıń háreketlerin esaplap, utıwdı qáledim. Men shaxmat quralına aylanǵanım joq, biraq men jaman strateg hám psixolog ta emespen. Shaxmat akademiyasın ashıw ideyası maǵan 2020-jılda, qorshaw (blokirovka) waqtında birden - shaxmat kursın ashıwdı oyıma keldi. Málim bolıwısha, shaxmat oynaw ushın endi sizge arnawlı shaxmat doskası hám tasları da kerek emes, hámmesi telefonıńızda. Jiyenim kúnniń kóp bólegin planshetinde atıspaq, mashına aydaw hám hár túrli oyınları menen ótkerer edi. <br /> Men oǵan shaxmattı kórsettim. Iyun ayına kelip ol ádewir jaqsı qarsılas boldı. Tez arada kishi shaxmat akademiyası ideyası "Future Academy" dı jaratıw rejesine aylandı, ol jerda balalar ózleri unatqan zatlardı úyreniwleri múmkin, úlkenler bolsa ómirin ózgertiwge háreket etedi. Bul házir júdá aktual máselelerden esaplanadı.
                         <br />
-                        <span className="about__copyright">Из интервью с основателем Академии Будущего Ивановым И.И.</span>
+                        <span className="about__copyright">Future Academy tiykarshısı Utemuratov R</span>
                     </div>
                 </div>
 
@@ -140,19 +137,19 @@ export const About: React.FC = () => {
                         </div>
                         <div className="about__graduates-card">
                             <img src={graduatesCircle} alt="" className="about__graduates-circle-icon" />
-                            <img src={avatar2} alt="" className="about__graduates-picture" />
+                            <img src={avatar2} alt="" className="about__graduates-picture asad" />
                             <span className="about__graduates-name">Asem Rajabova</span>
                             <span className="about__graduates-desc">Front-end Kursı Mentorı</span>
                         </div>
                         <div className="about__graduates-card">
                             <img src={graduatesCircle} alt="" className="about__graduates-circle-icon" />
-                            <img src={avatar3} alt="" className="about__graduates-picture" />
+                            <img src={avatar3} alt="" className="about__graduates-picture asad" />
                             <span className="about__graduates-name">Aziza Saparbaeva</span>
                             <span className="about__graduates-desc">Grafik Dizayn Kursı Mentorı</span>
                         </div>
                         <div className="about__graduates-card">
                             <img src={graduatesCircle} alt="" className="about__graduates-circle-icon" />
-                            <img src={avatar4} alt="" className="about__graduates-picture" />
+                            <img src={avatar4} alt="" className="about__graduates-picture asad" />
                             <span className="about__graduates-name">Neyla Utepova</span>
                             <span className="about__graduates-desc">Python Kursı Mentorı</span>
                         </div>
@@ -191,15 +188,15 @@ export const About: React.FC = () => {
 
                 <div className="about__result">
                     <div className="about__courses">
-                        <span className="about__courses-number">600</span>
+                        <span className="about__courses-number"><CountUp end={600} /></span>
                         <span className="about__courses-title">Kurslar</span>
                     </div>
                     <div className="about__teachers">
-                        <span className="about__teachers-number">82</span>
+                        <span className="about__teachers-number"><CountUp end={82} /></span>
                         <span className="about__teachers-title">Mentorlar</span>
                     </div>
                     <div className="about__graduates">
-                        <span className="about__graduates-number">14795</span>
+                        <span className="about__graduates-number"><CountUp end={14795} /></span>
                         <span className="about__graduates-title">Pitkeriwshiler</span>
                     </div>
                 </div>

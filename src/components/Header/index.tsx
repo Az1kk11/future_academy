@@ -30,9 +30,9 @@ export const Header: React.FC = () => {
                 <li className="header__item">
                     <Link to="/career" className="header__link">Karera</Link>
                 </li>
-                {/* <li className="header__item">
-                    <span className="header__link">8 800 950-33-98</span>
-                </li> */}
+                <li className="header__item">
+                    <span className="header__link">+998972411707</span>
+                </li>
                 <li className="header__item">
                     {location.pathname.startsWith('/registration') ?
                         ''

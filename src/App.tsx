@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
-import Layout from './Layouts'
-import { useDispatch, useSelector } from 'react-redux'
+
+import { useSelector } from 'react-redux'
 import AuthUserServices from './Redux/services/userAuth'
 import { getItem } from './Redux/helpers/persistance-storage'
-import { selectAuthAdmin, siginAdminSuccess } from './Redux/Slice/adminSlice'
+import { selectAuthAdmin } from './Redux/Slice/adminSlice'
+import { Layout } from './Layouts'
 
 const App: React.FC = () => {
   const { logedIn } = useSelector(selectAuthAdmin)
