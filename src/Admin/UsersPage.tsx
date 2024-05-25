@@ -68,7 +68,7 @@ export const UsersPage: React.FC = () => {
             {users.map((item: usersType) => (
               <tr key={item.id}>
                 <th>{item.id}</th>
-                <th>{item.name}</th>
+                <th>{item.name}</th>  
                 <th>{item.email}</th>
                 <th>{item.course}</th>
                 <th>{format(new Date(item.created_at), 'dd MMM yyyy')}</th>

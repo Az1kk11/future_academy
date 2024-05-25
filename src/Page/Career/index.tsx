@@ -47,7 +47,7 @@ export const Career: React.FC = () => {
             <div className="career__wrapper">
                 <div>
                     <img src={Union} alt="" className="career__union" />
-                    <span className="career__message">Biz benen siz árman etken jumıstı tabasız.</span>
+                    <span className="career__message">Keleshegińizdi Future Academy menen birge qurıń!</span>
                     <img src={sova} alt="" className="career__cova" />
                 </div>
                 <div className="career__preview">
