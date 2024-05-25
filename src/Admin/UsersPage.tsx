@@ -55,13 +55,15 @@ export const UsersPage: React.FC = () => {
   return (
     <div className="users-box">
       <h3>Oqıwshılar dizimi</h3>
-      <div className="title-table">
-        {thead?.map((item, index) => (
-          <p key={index}>{item?.name}</p>
-        ))}
-      </div>
       <div className="res-table">
         <table>
+          <thead>
+            <tr>
+              {thead?.map((item, index) => (
+                <th key={index}><strong>{item?.name}</strong></th>
+              ))}
+            </tr>
+          </thead>
           <tbody>
             {users.map((item: usersType) => (
               <tr key={item.id}>
