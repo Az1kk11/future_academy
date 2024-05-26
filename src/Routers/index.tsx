@@ -11,7 +11,7 @@ const Rauters: React.FC = () => {
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/courses' element={<Courses />} />
-      <Route path='/activity' element={<Activity />} />
+      <Route path='/actiwity' element={<Activity />} />
       <Route path='/career' element={<Career />} />
       <Route path='/registration' element={<Registration />} />
 

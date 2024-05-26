@@ -47,9 +47,9 @@ export const Activity: React.FC = () => {
                 </div>
                 <div className="activity__card5">
                     <img src={shutterstock_1709750299} alt="" className="activity__card5-picture" />
-                    <span className="activity__card5-caption">Vebinar</span>
+                    <span className="activity__card5-caption">Webinar</span>
                     <span className="activity__card5-title">Python Freelancer kim?</span>
-                    <span className="activity__card5-desc">Sber Bank maǵlıwmatlardı izertlew baslıǵı Anastasiya Borneva Python Freelancer kim? hám ol nelerdi biliwi kerek sol haqqındaǵı óziniń bilimlerin Zoom platforması arqalı Online vebinarda siz benen bólisedi.</span>
+                    <span className="activity__card5-desc">Sber Bank maǵlıwmatlardı izertlew baslıǵı Anastasiya Borneva Python Freelancer kim? hám ol nelerdi biliwi kerek sol haqqındaǵı óziniń bilimlerin Zoom platforması arqalı Online Webinarda siz benen bólisedi.</span>
                     <span className="activity__card5-date">2-iyun</span>
                 </div>
 

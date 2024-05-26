@@ -82,7 +82,7 @@ export const About: React.FC = () => {
                         <span className="about__founded-name">Utemuratov R</span>
                     </div>
                     <div className="about__desc">
-                        Hámmesi shaxmatqa bolǵan qızıǵıwshılıqlarımnan baslanǵan. Men dushpannıń háreketin aldınan bilejaq edim, onıń háreketlerin esaplap, utıwdı qáledim. Men shaxmat quralına aylanǵanım joq, biraq men jaman strateg hám psixolog ta emespen. Shaxmat akademiyasın ashıw ideyası maǵan 2020-jılda, qorshaw (blokirovka) waqtında birden - shaxmat kursın ashıwdı oyıma keldi. Málim bolıwısha, shaxmat oynaw ushın endi sizge arnawlı shaxmat doskası hám tasları da kerek emes, hámmesi telefonıńızda. Jiyenim kúnniń kóp bólegin planshetinde atıspaq, mashına aydaw hám hár túrli oyınları menen ótkerer edi. <br /> Men oǵan shaxmattı kórsettim. Iyun ayına kelip ol ádewir jaqsı qarsılas boldı. Tez arada kishi shaxmat akademiyası ideyası "Future Academy" dı jaratıw rejesine aylandı, ol jerda balalar ózleri unatqan zatlardı úyreniwleri múmkin, úlkenler bolsa ómirin ózgertiwge háreket etedi. Bul házir júdá aktual máselelerden esaplanadı.
+                        Hámmesi shaxmatqa bolǵan qızıǵıwshılıqlarımnan baslanǵan. Men dushpannıń háreketin aldınan bilejaq edim, onıń háreketlerin esaplap, utıwdı qáledim. Men shaxmat quralına aylanǵanım joq, biraq men jaman strateg hám psixolog ta emespen. Shaxmat akademiyasın ashıw ideyası maǵan 2020-jılda, qorshaw (blokirovka) waqtında birden - shaxmat kursın ashıwdı oyıma keldi. Málim bolıwısha, shaxmat oynaw ushın endi sizge arnawlı shaxmat doskası hám tasları da kerek emes, hámmesi telefonıńızda. Jiyenim kúnniń kóp bólegin planshetinde hár túrli oyınları menen ótkerer edi. <br /> Men oǵan shaxmattı kórsettim. Iyun ayına kelip ol ádewir jaqsı qarsılas boldı. Tez arada kishi shaxmat akademiyası ideyası "Future Academy" dı jaratıw rejesine aylandı, ol jerda balalar ózleri unatqan kursların úyreniwleri múmkin, úlkenler bolsa ómirin ózgertiwge háreket etedi. Bul házir júdá aktual máselelerden esaplanadı.
                         <br />
                         <span className="about__copyright">Future Academy tiykarshısı Utemuratov R</span>
                     </div>
@@ -109,7 +109,7 @@ export const About: React.FC = () => {
                         </div>
                         <div className="about__inner-box">
                             <img src={book} alt="" />
-                            <span className="about__inner-text">Rawajlanıw ilmga bolǵan talpınıstan kelip shıǵadı </span>
+                            <span className="about__inner-text">Rawajlanıw ilimge bolǵan talpınıstan kelip shıǵadı </span>
                         </div>
                         <div className="about__inner-box">
                             <img src={technology} alt="" />
